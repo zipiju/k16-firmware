@@ -33,9 +33,9 @@ extern "C" {
 
 // set values for ASIC PLL, we use R=16 N=Freq in MHz
 #define WORK_TICKS          16384   // 2^32 total / 2^18 hashes per tick
-#define TICK_TOTAL          12300   // 2^18 / 21.33uS TMR0 period (adjusted down for push time)
+#define TICK_TOTAL          12285   // 2^18 / 21.33uS TMR0 period (adjusted down for push time)
 #define CLOCK_R_VALUE       16
-#define DEFAULT_HASHCLOCK   333
+#define DEFAULT_HASHCLOCK   350
 #define CLOCK_NOCHG_MASK    0x00000002
 #define CLOCK_LOW_CHG       0x00030007
 #define CLOCK_HALF_CHG      0x00030017
