@@ -132,7 +132,7 @@
 //USB_ENABLE_STATUS_STAGE_TIMEOUTS feature is not enabled, then the USB_STATUS_STAGE_TIMEOUT
 //parameter is not relevant.
 
-#define USB_STATUS_STAGE_TIMEOUT     (BYTE)1   //Approximate timeout in milliseconds, except when
+#define USB_STATUS_STAGE_TIMEOUT     (BYTE)40   //Approximate timeout in milliseconds, except when
                                                 //USB_POLLING mode is used, and USBDeviceTasks() is called at < 1kHz
                                                 //In this special case, the timeout becomes approximately:
 //Timeout(in milliseconds) = ((1000 * (USB_STATUS_STAGE_TIMEOUT - 1)) / (USBDeviceTasks() polling frequency in Hz))

@@ -195,7 +195,7 @@ void ProcessIO(void)
         //    I2CRelay(OUTPacket, USBGEN_EP_SIZE);
         //else
             ProcessCmd(OUTPacket);
-    USBGenericOutHandle = USBGenRead(USBGEN_EP_NUM, (BYTE*)&OUTPacket, USBGEN_EP_SIZE);
+        USBGenericOutHandle = USBGenRead(USBGEN_EP_NUM, (BYTE*)&OUTPacket, USBGEN_EP_SIZE);
     }
 
     if(WQI != WQX && !USBHandleBusy(USBGenericInHandle)) {
@@ -209,7 +209,7 @@ void SendCmdReply(char *cmd, BYTE *data, BYTE count)
     if(WQI*USB_RECORD_SIZE + count + 2 < USBGEN_EP_SIZE) {
         INPacket[WQI*USB_RECORD_SIZE] = cmd[0];
         INPacket[WQI*USB_RECORD_SIZE + 1] = SlaveAddress;
-        for(BYTE n=0; n < count; n++)
+        for(BYTE n = 0; n < count; n++)
             INPacket[WQI*USB_RECORD_SIZE + n + 2] = data[n];
         WQI = (WQI+1) & 3;
     }

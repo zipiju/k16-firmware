@@ -25,8 +25,6 @@
 extern "C" {
 #endif
 
-#define FWPWD               "KlondikeRocks"
-
 #define MASTER_ADDRESS      0x00
 #define MAX_WORK_COUNT      4   // must be binary multiple
 #define WORKMASK            MAX_WORK_COUNT-1
@@ -35,7 +33,7 @@ extern "C" {
 
 // set values for ASIC PLL, we use R=16 N=Freq in MHz
 #define WORK_TICKS          16384   // 2^32 total / 2^18 hashes per tick
-#define TICK_TOTAL          12500   // 2^18 / 21.33uS TMR0 period (adjusted down for push time)
+#define TICK_TOTAL          12300   // 2^18 / 21.33uS TMR0 period (adjusted down for push time)
 #define CLOCK_R_VALUE       16
 #define DEFAULT_HASHCLOCK   333
 #define CLOCK_NOCHG_MASK    0x00000002
@@ -51,13 +49,6 @@ extern "C" {
 #define DEFAULT_TEMP_CRITICAL   80 
 #define DEFAULT_FAN_TARGET      255  // PWM
     
-// number of hashes to delay results while test work pushed
-// 390uS push time @ 256 MHz startup clock = 99840 hashes
-#define DETECT_DELAY_COUNT  109980
-#define GOOD_NONCE          0xe3d69bc9
-#define GOOD_MIDSTATE       { 0x5fddb5bc,0x00bdafd2,0x144684c7,0x19c68fa2,0x27d0a8e3,0x34ad84b2,0xa92c66be,0x3e99a4fd }
-#define GOOD_DATA           { 0xf64684bb,0x51bc1508,0x1a011337 }
-
 // for controlling how bits are adjusted per bank
 #define DATA_ZERO   0x48
 #define DATA_ONE    0x90
@@ -174,7 +165,7 @@ void SendCmdReply(char *cmd, BYTE *ReplyBuf, BYTE count);
 #define HASH_TRIS_1N    TRISCbits.TRISC3
 #define HASH_IDLE()     LATC = 0xD8;
 
-#define RESET_RX()      { RCSTAbits.SPEN = 0;RCSTAbits.SPEN = 1;ResultQC = 0; }
+#define RESET_RX()      { RCSTAbits.SPEN = 0; RCSTAbits.SPEN = 1; }
 #define INPUT_PIN 1
 #define OUTPUT_PIN 0
 

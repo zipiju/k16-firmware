@@ -32,7 +32,7 @@ BYTE HashTime = 256 - ((WORD)TICK_TOTAL/DEFAULT_HASHCLOCK);
 volatile WORKSTATUS Status = {'I',0,0,0,0,0,0,0,0, WORK_TICKS, 0 };
 WORKCFG Cfg = { DEFAULT_HASHCLOCK, DEFAULT_TEMP_TARGET, DEFAULT_TEMP_CRITICAL, DEFAULT_FAN_TARGET, 0 };
 WORKTASK WorkQue[MAX_WORK_COUNT];
-volatile BYTE ResultQue[MAX_RESULT_COUNT][8];
+volatile BYTE ResultQue[MAX_RESULT_COUNT][6];
 DWORD ClockCfg[2] = { (((DWORD)DEFAULT_HASHCLOCK) << 18) | CLOCK_LOW_CHG, CLOCK_HIGH_CFG };
 
 DWORD NonceRanges[8];
@@ -49,7 +49,7 @@ void ProcessCmd(char *cmd)
             if( Status.WorkQC < MAX_WORK_COUNT-1 ) {
                 WorkQue[ (WorkNow + Status.WorkQC++) & WORKMASK ] = *(WORKTASK *)(cmd+2);
                 if(Status.State == 'R') {
-                    AsicPreCalc(&WorkQue[WorkNow]);
+                    //AsicPreCalc(&WorkQue[WorkNow]);
                     AsicPushWork();
                 }
             }
@@ -107,6 +107,7 @@ void ProcessCmd(char *cmd)
 
 void AsicPushWork(void)
 {
+    AsicPreCalc(&WorkQue[WorkNow]);
     Status.WorkID = WorkQue[WorkNow].WorkID;
     SendAsicData(&WorkQue[WorkNow]);
     WorkNow = (WorkNow+1) & WORKMASK;
@@ -126,7 +127,7 @@ void CheckFanSpeed(void)
         PWM1OE = 1;
         Status.FanSpeed = 0;
     }
-    else if( IOCAF3 == 1) { // only check if NegEdge else no Tach present
+    else if(IOCAF3 == 1) { // only check if NegEdge else no Tach present
         IOCAF3 = 0; // reset Tach detection
         FAN_PWM = 1; // force PWM fan output to ON
         PWM1OE=0;
@@ -145,21 +146,7 @@ void CheckFanSpeed(void)
 
 void DetectAsics(void)
 {
-/* disabled for now, not fully worked out yet
-   const WORKTASK TestWork = { 0xFF, GOOD_MIDSTATE, GOOD_DATA };
-    const DWORD GoodNonce = GOOD_NONCE;
-    const DWORD StartNonce = (GOOD_NONCE - DETECT_DELAY_COUNT);
-    BankSize = 8;
-    Status.ChipCount = 0;
-    for(BYTE x = 0; x < BankSize; x++)
-        NonceRanges[x] = StartNonce;
-    WorkQue[0] = TestWork;
-    AsicPreCalc(&WorkQue[0]);
-    
-    //SendAsicData(&WorkQue[0], (StartNonce & 0x80000000) ? DATA_ONE : DATA_ZERO);
-    // wait for "push work time" for results to return and be counted*/
-    
-    Status.ChipCount = 16; // just for testing
+    Status.ChipCount = 16;
 
     // pre-calc nonce range values
     BankSize = (Status.ChipCount)/2;
@@ -182,8 +169,7 @@ void WorkTick(void)
 
     if((Status.State == 'W') && (++Status.HashCount == Status.MaxCount)) {
         if(Status.WorkQC > 0) {
-            Status.State = 'P'; // set state to push data and do asap
-            return;
+            Status.State = 'P';
         }
         else {
             Status.State = 'R';
@@ -205,6 +191,7 @@ void ResultRx(void)
 {
     TimeOut = 0;
     ResultPos++;
+    
     if(ResultPos == MAX_RESULT_COUNT)
         ResultPos = 0;
 
@@ -232,8 +219,9 @@ void ResultRx(void)
     }
 
 outrx:
-    RCSTAbits.SPEN = 0;
-    InitResultRx();
+    RESET_RX();
+    ResultQC = 0;
+    IOCBF = 0;
 }
 
 void UpdateFanSpeed(void)
@@ -305,6 +293,7 @@ void InitResultRx(void)
     RCSTAbits.SPEN = 1;
     TXSTAbits.CSRC = 0;
     BAUDCONbits.SCKP = 0;
+    BAUDCONbits.BRG16 = 1;
     ANSELBbits.ANSB5 = 0;
     //PIE1bits.RCIE = 1;
     IOCBPbits.IOCBP7 = 1;
