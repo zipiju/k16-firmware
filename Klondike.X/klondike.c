@@ -49,7 +49,6 @@ void ProcessCmd(char *cmd)
             if( Status.WorkQC < MAX_WORK_COUNT-1 ) {
                 WorkQue[ (WorkNow + Status.WorkQC++) & WORKMASK ] = *(WORKTASK *)(cmd+2);
                 if(Status.State == 'R') {
-                    //AsicPreCalc(&WorkQue[WorkNow]);
                     AsicPushWork();
                 }
             }
@@ -114,8 +113,7 @@ void AsicPushWork(void)
     Status.HashCount = 0;
     TMR0 = HashTime;
     Status.State = 'W';
-    if(--Status.WorkQC > 0)
-        AsicPreCalc(&WorkQue[WorkNow]);
+    Status.WorkQC--;
 }
 
 // Housekeeping functons
