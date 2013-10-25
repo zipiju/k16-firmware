@@ -26,14 +26,15 @@ const IDENTITY ID = { 0x10, "K16", 0xDEADBEEF };
 //const char FwPwd[] = FWPWD;
 
 DWORD BankRanges[8] = { 0, 0x40000000, 0x2aaaaaaa, 0x20000000, 0x19999999, 0x15555555, 0x12492492, 0x10000000 };
-BYTE WorkNow, BankSize, ResultQC, SlowTick, TimeOut, ResultPos = 0;
+BYTE WorkNow, BankSize, ResultQC, SlowTick, TimeOut, ResultPos = 0, TempTarget, LastTemp, FanLevel;
 BYTE SlaveAddress = MASTER_ADDRESS;
 BYTE HashTime = 256 - ((WORD)TICK_TOTAL/DEFAULT_HASHCLOCK);
 volatile WORKSTATUS Status = {'I',0,0,0,0,0,0,0,0, WORK_TICKS, 0 };
-WORKCFG Cfg = { DEFAULT_HASHCLOCK, DEFAULT_TEMP_TARGET, DEFAULT_TEMP_CRITICAL, DEFAULT_FAN_TARGET, 0 };
+WORKCFG Cfg = { DEFAULT_HASHCLOCK, DEFAULT_TEMP_TARGET, 0, 0, 0 };
 WORKTASK WorkQue[MAX_WORK_COUNT];
 volatile BYTE ResultQue[MAX_RESULT_COUNT][6];
 DWORD ClockCfg[2] = { (((DWORD)DEFAULT_HASHCLOCK) << 18) | CLOCK_LOW_CHG, CLOCK_HIGH_CFG };
+INT16 Step, Error, LastError;
 
 DWORD NonceRanges[8];
 
@@ -82,7 +83,8 @@ void ProcessCmd(char *cmd)
                 else
                     ClockCfg[0] = ((DWORD)Cfg.HashClock << 18) | CLOCK_LOW_CHG;
                 HashTime = 256 - ((WORD)TICK_TOTAL/Cfg.HashClock);
-                PWM1DCH = Cfg.FanTarget;
+                // PWM1DCH = Cfg.FanTarget;
+                TempTarget = Cfg.TempTarget;
             }
             SendCmdReply(cmd, (char *)&Cfg, sizeof(Cfg));
             break;
@@ -177,8 +179,8 @@ void WorkTick(void)
     if(++SlowTick == 0) {
         LED_Off();
         Status.Temp = ADRESH;
-        // todo: adjust fan speed for target temperature
         ADCON0bits.GO_nDONE = 1;
+        UpdateFanLevel();
         //CheckFanSpeed();
     }
    //if((SlowTick & 3) == 0)
@@ -222,6 +224,27 @@ outrx:
     IOCBF = 0;
 }
 
+// function that adjusts fan speed according to target and current temperatures
+void UpdateFanLevel(void)
+{
+    Error = Status.Temp - TempTarget;
+
+    if(FanLevel + (1*Error - 0.5*LastError - 8*(LastTemp - Status.Temp)) > 75 && FanLevel + (1*Error - 0.5*LastError - 8*(LastTemp - Status.Temp)) <= 255) {
+        FanLevel += (1*Error - 0.5*LastError - 8*(LastTemp - Status.Temp));
+    }
+    else if(FanLevel + Step > 255) {
+        FanLevel = 255;
+    }
+    else if(FanLevel + Step < 75) {
+        FanLevel = 75;
+    }
+
+    LastTemp = Status.Temp;
+    LastError = Error;
+    // this is just temporary - fan speed should be measured RPM of a fan (will change it when it will be functional)
+    PWM1DCH = Status.FanSpeed = FanLevel;
+}
+
 void UpdateFanSpeed(void)
 {
     TMR1GIF = TMR1IF = 0;
@@ -240,7 +263,7 @@ void InitFAN(void)
     PWM1CON = 0;
     PR2 = 0xFF;
     PWM1CON = 0xC0;
-    PWM1DCH = DEFAULT_FAN_TARGET;
+    PWM1DCH = FanLevel = DEFAULT_FAN_TARGET;
     PWM1DCL = 0;
     TMR2IF = 0;
     T2CONbits.T2CKPS = 1;
@@ -265,6 +288,7 @@ void InitTempSensor(void)
     ADCON1bits.ADCS = 6;
     ADCON1bits.ADPREF = 0;
     ADCON2bits.TRIGSEL = 0;
+    TempTarget = DEFAULT_TEMP_TARGET;
 }
 
 void InitWorkTick(void)

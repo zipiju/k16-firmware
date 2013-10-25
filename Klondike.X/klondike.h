@@ -26,7 +26,7 @@ extern "C" {
 #endif
 
 #define MASTER_ADDRESS      0x00
-#define MAX_WORK_COUNT      4   // must be binary multiple
+#define MAX_WORK_COUNT      4   // must be binary multiple and match driver
 #define WORKMASK            MAX_WORK_COUNT-1
 #define MAX_RESULT_COUNT    2
 #define USB_RECORD_SIZE     15
@@ -45,9 +45,9 @@ extern "C" {
 #define MAX_HASH_CLOCK      450
 
 // default temp/fan values
-#define DEFAULT_TEMP_TARGET     60 
-#define DEFAULT_TEMP_CRITICAL   80 
-#define DEFAULT_FAN_TARGET      255  // PWM
+#define DEFAULT_TEMP_TARGET     143 // default temperature to hold by adjusting fan speed
+#define DEFAULT_TEMP_CRITICAL   80  // critical temp (not decided what to do in this case - probably disable clock, disable usb enable cmd and wait for cooldown)
+#define DEFAULT_FAN_TARGET      230 // default fan speed when firmware is init
     
 // for controlling how bits are adjusted per bank
 #define DATA_ZERO   0x48
@@ -76,8 +76,8 @@ typedef struct _workstatus {
 
 typedef struct _workcfg {
     WORD HashClock;
-    BYTE TempTarget, TempCritical;
-    BYTE FanTarget, pad;
+    BYTE TempTarget, Future1;
+    BYTE Future2, Future3;
 } WORKCFG;
 
 typedef struct _worktask {
@@ -106,6 +106,7 @@ void ResultRx(void);
 void WorkTick(void);
 void UpdateTemp(void);
 void UpdateFanSpeed(void);
+void UpdateFanLevel(void);
 
 void I2CRelay(char *data, BYTE count);
 void I2CPoll(void);
