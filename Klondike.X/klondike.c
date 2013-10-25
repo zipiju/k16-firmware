@@ -26,7 +26,7 @@ const IDENTITY ID = { 0x10, "K16", 0xDEADBEEF };
 //const char FwPwd[] = FWPWD;
 
 DWORD BankRanges[8] = { 0, 0x40000000, 0x2aaaaaaa, 0x20000000, 0x19999999, 0x15555555, 0x12492492, 0x10000000 };
-BYTE WorkNow, BankSize, ResultQC, SlowTick, TimeOut, ResultPos = 0, TempTarget, LastTemp, FanLevel;
+BYTE WorkNow, BankSize, ResultQC, SlowTick, VerySlowTick, TimeOut, ResultPos = 0, TempTarget, LastTemp, FanLevel;
 BYTE SlaveAddress = MASTER_ADDRESS;
 BYTE HashTime = 256 - ((WORD)TICK_TOTAL/DEFAULT_HASHCLOCK);
 volatile WORKSTATUS Status = {'I',0,0,0,0,0,0,0,0, WORK_TICKS, 0 };
@@ -179,7 +179,9 @@ void WorkTick(void)
         LED_Off();
         Status.Temp = ADRESH;
         ADCON0bits.GO_nDONE = 1;
-        UpdateFanLevel();
+        if((++VerySlowTick % 15) == 0) {
+            UpdateFanLevel();
+        }
         //CheckFanSpeed();
     }
    //if((SlowTick & 3) == 0)

@@ -283,19 +283,19 @@ EVENT_TRANSFER_TERMINATED 5
 [v _DetectAsics DetectAsics `(v  1 e 0 0 ]
 "165
 [v _WorkTick WorkTick `(v  1 e 0 0 ]
-"190
+"192
 [v _ResultRx ResultRx `(v  1 e 0 0 ]
-"228
+"230
 [v _UpdateFanLevel UpdateFanLevel `(v  1 e 0 0 ]
-"249
+"251
 [v _UpdateFanSpeed UpdateFanSpeed `(v  1 e 0 0 ]
-"261
+"263
 [v _InitFAN InitFAN `(v  1 e 0 0 ]
-"281
+"283
 [v _InitTempSensor InitTempSensor `(v  1 e 0 0 ]
-"295
+"297
 [v _InitWorkTick InitWorkTick `(v  1 e 0 0 ]
-"311
+"313
 [v _InitResultRx InitResultRx `(v  1 e 0 0 ]
 "70 C:\firmware-fresh-mod\Klondike.X\main.c
 [v _ISRCode ISRCode `II(v  1 e 0 0 ]
@@ -905,6 +905,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _WorkNow WorkNow `uc  1 e 1 0 ]
 [v _ResultQC ResultQC `uc  1 e 1 0 ]
 [v _SlowTick SlowTick `uc  1 e 1 0 ]
+[v _VerySlowTick VerySlowTick `uc  1 e 1 0 ]
 [v _TimeOut TimeOut `uc  1 e 1 0 ]
 [v _ResultPos ResultPos `uc  1 e 1 0 ]
 [v _TempTarget TempTarget `uc  1 e 1 0 ]
@@ -1059,25 +1060,25 @@ EVENT_TRANSFER_TERMINATED 5
 {
 "179
 } 0
-"311 C:\firmware-fresh-mod\Klondike.X\klondike.c
+"313 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _InitResultRx InitResultRx `(v  1 e 0 0 ]
 {
-"325
+"327
 } 0
-"295
+"297
 [v _InitWorkTick InitWorkTick `(v  1 e 0 0 ]
 {
-"308
+"310
 } 0
-"281
+"283
 [v _InitTempSensor InitTempSensor `(v  1 e 0 0 ]
 {
-"292
+"294
 } 0
-"261
+"263
 [v _InitFAN InitFAN `(v  1 e 0 0 ]
 {
-"278
+"280
 } 0
 "147
 [v _DetectAsics DetectAsics `(v  1 e 0 0 ]
@@ -1102,12 +1103,23 @@ EVENT_TRANSFER_TERMINATED 5
 "165 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _WorkTick WorkTick `(v  1 e 0 0 ]
 {
-"187
+"189
 } 0
-"228
+"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"6
+[v ___awmod@sign sign `uc  1 a 1 2 ]
+[v ___awmod@counter counter `uc  1 a 1 1 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 14 ]
+[v ___awmod@dividend dividend `i  1 p 2 16 ]
+"30
+} 0
+"230 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _UpdateFanLevel UpdateFanLevel `(v  1 e 0 0 ]
 {
-"246
+"248
 } 0
 "45 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\fttol.c
 [v ___fttol __fttol `(l  1 e 4 0 ]
@@ -1503,10 +1515,10 @@ EVENT_TRANSFER_TERMINATED 5
 {
 "95
 } 0
-"190 C:\firmware-fresh-mod\Klondike.X\klondike.c
+"192 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _ResultRx ResultRx `(v  1 e 0 0 ]
 {
-"224
+"226
 } 0
 "208 C:\firmware-fresh-mod\Klondike.X\main.c
 [v i1_SendCmdReply SendCmdReply `(v  1 e 0 0 ]
