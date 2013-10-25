@@ -275,27 +275,27 @@ EVENT_TRANSFER_TERMINATED 5
 [v _InitI2CMaster InitI2CMaster `(v  1 e 0 0 ]
 "45 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _ProcessCmd ProcessCmd `(v  1 e 0 0 ]
-"110
+"109
 [v _AsicPushWork AsicPushWork `(v  1 e 0 0 ]
-"124
+"123
 [v _CheckFanSpeed CheckFanSpeed `(v  1 e 0 0 ]
-"148
+"147
 [v _DetectAsics DetectAsics `(v  1 e 0 0 ]
-"166
+"165
 [v _WorkTick WorkTick `(v  1 e 0 0 ]
-"191
+"190
 [v _ResultRx ResultRx `(v  1 e 0 0 ]
-"229
+"228
 [v _UpdateFanLevel UpdateFanLevel `(v  1 e 0 0 ]
-"250
+"249
 [v _UpdateFanSpeed UpdateFanSpeed `(v  1 e 0 0 ]
-"262
+"261
 [v _InitFAN InitFAN `(v  1 e 0 0 ]
-"282
+"281
 [v _InitTempSensor InitTempSensor `(v  1 e 0 0 ]
-"296
+"295
 [v _InitWorkTick InitWorkTick `(v  1 e 0 0 ]
-"312
+"311
 [v _InitResultRx InitResultRx `(v  1 e 0 0 ]
 "70 C:\firmware-fresh-mod\Klondike.X\main.c
 [v _ISRCode ISRCode `II(v  1 e 0 0 ]
@@ -635,13 +635,13 @@ EVENT_TRANSFER_TERMINATED 5
 ]
 [u S1802 . 1 `S1790 1 . 1 0 `S1794 1 . 1 0 ]
 [v _T2CONbits T2CONbits `VES1802  1 e 1 @28 ]
-[s S1586 . 1 `uc 1 . 1 0 :4:0 
+[s S1597 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 LATA4 1 0 :1:4 
 `uc 1 LATA5 1 0 :1:5 
 ]
 "982
-[u S1590 . 1 `S1586 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES1590  1 e 1 @140 ]
+[u S1601 . 1 `S1597 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES1601  1 e 1 @140 ]
 [s S1460 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TRISB4 1 0 :1:4 
 `uc 1 TRISB5 1 0 :1:5 
@@ -723,7 +723,7 @@ EVENT_TRANSFER_TERMINATED 5
 [u S1855 . 1 `S1847 1 . 1 0 `S1850 1 . 1 0 ]
 [v _ADCON2bits ADCON2bits `VES1855  1 e 1 @159 ]
 "1827
-[v _LATAbits LATAbits `VES1590  1 e 1 @268 ]
+[v _LATAbits LATAbits `VES1601  1 e 1 @268 ]
 "1879
 [v _LATC LATC `VEuc  1 e 1 @270 ]
 "1896
@@ -959,7 +959,7 @@ EVENT_TRANSFER_TERMINATED 5
 {
 [v ProcessCmd@cmd cmd `*.6uc  1 a 1 36 ]
 [v ProcessCmd@cmd cmd `*.6uc  1 a 1 36 ]
-"107
+"106
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
@@ -995,10 +995,10 @@ EVENT_TRANSFER_TERMINATED 5
 [v ___bmul@multiplicand multiplicand `uc  1 p 1 14 ]
 "13
 } 0
-"110 C:\firmware-fresh-mod\Klondike.X\klondike.c
+"109 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _AsicPushWork AsicPushWork `(v  1 e 0 0 ]
 {
-"119
+"118
 } 0
 "3 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\wmul.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
@@ -1059,32 +1059,32 @@ EVENT_TRANSFER_TERMINATED 5
 {
 "179
 } 0
-"312 C:\firmware-fresh-mod\Klondike.X\klondike.c
+"311 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _InitResultRx InitResultRx `(v  1 e 0 0 ]
 {
-"326
+"325
 } 0
-"296
+"295
 [v _InitWorkTick InitWorkTick `(v  1 e 0 0 ]
 {
-"309
+"308
 } 0
-"282
+"281
 [v _InitTempSensor InitTempSensor `(v  1 e 0 0 ]
 {
-"293
+"292
 } 0
-"262
+"261
 [v _InitFAN InitFAN `(v  1 e 0 0 ]
 {
-"279
+"278
 } 0
-"148
+"147
 [v _DetectAsics DetectAsics `(v  1 e 0 0 ]
 {
-"156
+"155
 [v DetectAsics@x x `uc  1 a 1 14 ]
-"161
+"160
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
@@ -1099,15 +1099,15 @@ EVENT_TRANSFER_TERMINATED 5
 [v ___awdiv@dividend dividend `i  1 p 2 16 ]
 "37
 } 0
-"166 C:\firmware-fresh-mod\Klondike.X\klondike.c
+"165 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _WorkTick WorkTick `(v  1 e 0 0 ]
 {
-"188
+"187
 } 0
-"229
+"228
 [v _UpdateFanLevel UpdateFanLevel `(v  1 e 0 0 ]
 {
-"247
+"246
 } 0
 "45 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\fttol.c
 [v ___fttol __fttol `(l  1 e 4 0 ]
@@ -1503,10 +1503,10 @@ EVENT_TRANSFER_TERMINATED 5
 {
 "95
 } 0
-"191 C:\firmware-fresh-mod\Klondike.X\klondike.c
+"190 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _ResultRx ResultRx `(v  1 e 0 0 ]
 {
-"225
+"224
 } 0
 "208 C:\firmware-fresh-mod\Klondike.X\main.c
 [v i1_SendCmdReply SendCmdReply `(v  1 e 0 0 ]

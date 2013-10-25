@@ -47,7 +47,6 @@ void ProcessCmd(char *cmd)
     // we already know address is ours here
     switch(cmd[0]) {
         case 'W': // queue new work
-            HASH_CLK_EN = 1;
             if( Status.WorkQC < MAX_WORK_COUNT-1 ) {
                 WorkQue[ (WorkNow + Status.WorkQC++) & WORKMASK ] = *(WORKTASK *)(cmd+2);
                 if(Status.State == 'R') {

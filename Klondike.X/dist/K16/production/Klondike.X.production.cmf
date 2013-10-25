@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Jojko\AppData\Local\Temp\s370.obj
+$C:\Users\Jojko\AppData\Local\Temp\s1kk.obj
 end_init CODE 0 12 12 2 2
 reset_vec CODE 0 0 0 2 2
 config CONFIG 0 8007 8007 2 2
@@ -22,13 +22,13 @@ text63 CODE 0 1B80 1B80 11 2
 text62 CODE 0 1641 1641 93 2
 text61 CODE 0 AE6 AE6 B3 2
 text59 CODE 0 984 984 B0 2
-text58 CODE 0 1B5E 1B5E 1 2
-text57 CODE 0 8AF 8AF 1 2
-text56 CODE 0 8B0 8B0 1 2
-text55 CODE 0 2 2 1 2
-text54 CODE 0 3 3 1 2
-text53 CODE 0 1000 1000 3 2
-text52 CODE 0 7FF 7FF 1 2
+text58 CODE 0 1001 1001 1 2
+text57 CODE 0 1002 1002 1 2
+text56 CODE 0 8AF 8AF 1 2
+text55 CODE 0 8B0 8B0 1 2
+text54 CODE 0 2 2 1 2
+text53 CODE 0 7FC 7FC 3 2
+text52 CODE 0 3 3 1 2
 text51 CODE 0 1EBB 1EBB 4D 2
 text50 CODE 0 1D60 1D60 2A 2
 text49 CODE 0 1F08 1F08 4E 2
@@ -52,7 +52,7 @@ text33 CODE 0 1E33 1E33 43 2
 text32 CODE 0 A34 A34 B2 2
 text31 CODE 0 1D8A 1D8A 33 2
 text30 CODE 0 109B 109B 66 2
-text29 CODE 0 78A 78A 74 2
+text29 CODE 0 788 788 74 2
 text28 CODE 0 D05 D05 EB 2
 text27 CODE 0 1168 1168 6B 2
 text26 CODE 0 1D12 1D12 27 2
@@ -60,7 +60,7 @@ text25 CODE 0 DF0 DF0 F6 2
 text24 CODE 0 B99 B99 B4 2
 text23 CODE 0 1B5F 1B5F 9 2
 text22 CODE 0 1532 1532 87 2
-text21 CODE 0 653 653 137 2
+text21 CODE 0 651 651 137 2
 text20 CODE 0 1003 1003 3F 2
 text19 CODE 0 1101 1101 67 2
 text18 CODE 0 C4D C4D B8 2
@@ -79,7 +79,7 @@ text6 CODE 0 142C 142C 82 2
 text5 CODE 0 1B91 1B91 12 2
 text4 CODE 0 1769 1769 97 2
 text3 CODE 0 1E76 1E76 45 2
-text2 CODE 0 4E1 4E1 172 2
+text2 CODE 0 4E1 4E1 170 2
 text1 CODE 0 12B0 12B0 7C 2
 maintext CODE 0 1BF5 1BF5 17 2
 cstackBANK0 BANK0 1 50 50 12 1
@@ -102,7 +102,7 @@ nvBANK3 BANK3 1 1E3 1E3 3 1
 strings STRING 0 800 800 AF 2
 idataBANK7 CODE 0 1CAC 1CAC 20 2
 idataBANK3 CODE 0 8B1 8B1 27 2
-idataBANK0 CODE 0 7FE 7FE 1 2
+idataBANK0 CODE 0 7FF 7FF 1 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -117,9 +117,12 @@ BANK7 003C0-003EF 1
 BANK8 00420-0046F 1
 BANK9 004A0-004EF 1
 BIGRAM 02000-023EF 1
-CODE 0181A-01B5D 2
-CONST 0181A-01B5D 2
-ENTRY 0181A-01B5D 2
+CODE 01000-01000 2
+CODE 0181A-01B5E 2
+CONST 01000-01000 2
+CONST 0181A-01B5E 2
+ENTRY 01000-01000 2
+ENTRY 0181A-01B5E 2
 IDLOC 08000-08003 2
 RAM 001E6-001EF 1
 RAM 002E0-002EF 1
@@ -160,8 +163,10 @@ SFR6 00300-0031F 1
 SFR7 00380-0039F 1
 SFR8 00400-0041F 1
 SFR9 00480-0049F 1
-STRCODE 0181A-01B5D 2
-STRING 0181A-01B5D 2
+STRCODE 01000-01000 2
+STRCODE 0181A-01B5E 2
+STRING 01000-01000 2
+STRING 0181A-01B5E 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -176,8 +181,8 @@ STRING 0181A-01B5D 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/K16/production\Klondike.X.production.obj
-"C:\firmware-fresh-mod\Klondike.X\main.c":377 2 text55 CODE
-"C:\firmware-fresh-mod/USB/usb_function_generic.c":296 3 text54 CODE
+"C:\firmware-fresh-mod/USB/usb_function_generic.c":296 2 text54 CODE
+"C:\firmware-fresh-mod\Klondike.X\main.c":436 3 text52 CODE
 "C:\firmware-fresh-mod\Klondike.X\main.c":70 4 intentry CODE
 "C:\firmware-fresh-mod\Klondike.X\main.c":72 8 intentry CODE
 "C:\firmware-fresh-mod\Klondike.X\main.c":73 C intentry CODE
@@ -217,72 +222,72 @@ $dist/K16/production\Klondike.X.production.obj
 "C:\firmware-fresh-mod\Klondike.X\asic.c":356 4E1 text8 CODE
 "C:\firmware-fresh-mod\Klondike.X\klondike.c":48 4E3 text2 CODE
 "C:\firmware-fresh-mod\Klondike.X\klondike.c":50 4E4 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":51 4E6 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":52 4EB text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":53 522 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":54 526 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":56 529 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":61 52A text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":62 52E text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":67 531 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":68 541 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":70 542 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":74 543 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":75 54D text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":76 55C text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":77 564 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":78 568 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":79 576 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":80 57A text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":81 581 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":82 585 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":83 58C text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":85 5A5 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":86 5C8 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":87 5E1 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":89 5E8 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":90 5F8 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":92 5F9 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":93 60E text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":94 623 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":95 633 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":105 636 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":48 637 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":51 4E9 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":52 520 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":53 524 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":55 527 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":60 528 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":61 52C text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":66 52F text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":67 53F text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":69 540 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":73 541 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":74 54B text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":75 55A text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":76 562 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":77 566 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":78 574 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":79 578 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":80 57F text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":81 583 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":82 58A text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":84 5A3 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":85 5C6 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":86 5DF text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":88 5E6 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":89 5F6 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":91 5F7 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":92 60C text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":93 621 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":94 631 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":104 634 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":48 635 text2 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":105 64E text2 CODE
 "C:\firmware-fresh-mod\Klondike.X\klondike.c":106 650 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":107 652 text2 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":230 653 text21 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":231 66D text21 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":233 706 text21 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":234 734 text21 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":235 73B text21 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":236 73C text21 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":237 753 text21 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":239 755 text21 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":240 76C text21 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":243 772 text21 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":244 779 text21 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":246 780 text21 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":247 789 text21 CODE
-"C:\firmware-fresh-mod/USB/usb_device.c":2528 78A text29 CODE
-"C:\firmware-fresh-mod/USB/usb_device.c":2532 790 text29 CODE
-"C:\firmware-fresh-mod/USB/usb_device.c":2536 795 text29 CODE
-"C:\firmware-fresh-mod/USB/usb_device.c":2544 7A2 text29 CODE
-"C:\firmware-fresh-mod/USB/usb_device.c":2546 7A7 text29 CODE
-"C:\firmware-fresh-mod/USB/usb_device.c":2549 7AD text29 CODE
-"C:\firmware-fresh-mod/USB/usb_device.c":2557 7B7 text29 CODE
-"C:\firmware-fresh-mod/USB/usb_device.c":2559 7BC text29 CODE
-"C:\firmware-fresh-mod/USB/usb_device.c":2560 7D0 text29 CODE
-"C:\firmware-fresh-mod/USB/usb_device.c":2557 7D9 text29 CODE
-"C:\firmware-fresh-mod/USB/usb_device.c":2562 7E1 text29 CODE
-"C:\firmware-fresh-mod/USB/usb_device.c":2565 7ED text29 CODE
-"C:\firmware-fresh-mod/USB/usb_device.c":2566 7EF text29 CODE
-"C:\firmware-fresh-mod/USB/usb_device.c":2570 7F0 text29 CODE
-"C:\firmware-fresh-mod/USB/usb_device.c":2572 7F2 text29 CODE
-"C:\firmware-fresh-mod/USB/usb_device.c":2573 7F3 text29 CODE
-"C:\firmware-fresh-mod/USB/usb_device.c":2577 7FB text29 CODE
-"C:\firmware-fresh-mod/USB/usb_device.c":2578 7FD text29 CODE
-"C:\firmware-fresh-mod/USB/usb_device.c":2580 7FE text29 CODE
-"C:\firmware-fresh-mod\Klondike.X\main.c":436 7FF text52 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":229 651 text21 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":230 66B text21 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":232 704 text21 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":233 732 text21 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":234 739 text21 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":235 73A text21 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":236 751 text21 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":238 753 text21 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":239 76A text21 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":242 770 text21 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":243 777 text21 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":245 77E text21 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":246 787 text21 CODE
+"C:\firmware-fresh-mod/USB/usb_device.c":2528 788 text29 CODE
+"C:\firmware-fresh-mod/USB/usb_device.c":2532 78E text29 CODE
+"C:\firmware-fresh-mod/USB/usb_device.c":2536 793 text29 CODE
+"C:\firmware-fresh-mod/USB/usb_device.c":2544 7A0 text29 CODE
+"C:\firmware-fresh-mod/USB/usb_device.c":2546 7A5 text29 CODE
+"C:\firmware-fresh-mod/USB/usb_device.c":2549 7AB text29 CODE
+"C:\firmware-fresh-mod/USB/usb_device.c":2557 7B5 text29 CODE
+"C:\firmware-fresh-mod/USB/usb_device.c":2559 7BA text29 CODE
+"C:\firmware-fresh-mod/USB/usb_device.c":2560 7CE text29 CODE
+"C:\firmware-fresh-mod/USB/usb_device.c":2557 7D7 text29 CODE
+"C:\firmware-fresh-mod/USB/usb_device.c":2562 7DF text29 CODE
+"C:\firmware-fresh-mod/USB/usb_device.c":2565 7EB text29 CODE
+"C:\firmware-fresh-mod/USB/usb_device.c":2566 7ED text29 CODE
+"C:\firmware-fresh-mod/USB/usb_device.c":2570 7EE text29 CODE
+"C:\firmware-fresh-mod/USB/usb_device.c":2572 7F0 text29 CODE
+"C:\firmware-fresh-mod/USB/usb_device.c":2573 7F1 text29 CODE
+"C:\firmware-fresh-mod/USB/usb_device.c":2577 7F9 text29 CODE
+"C:\firmware-fresh-mod/USB/usb_device.c":2578 7FB text29 CODE
+"C:\firmware-fresh-mod\Klondike.X\main.c":410 7FC text53 CODE
+"C:\firmware-fresh-mod/USB/usb_device.c":2580 7FC text29 CODE
+"C:\firmware-fresh-mod\Klondike.X\main.c":411 7FE text53 CODE
 "C:\firmware-fresh-mod\Klondike.X\klondike.c":28 800 strings STRING
 "C:\firmware-fresh-mod/usb_descriptors.c":245 801 strings STRING
 "C:\firmware-fresh-mod/usb_descriptors.c":240 804 strings STRING
@@ -292,8 +297,8 @@ $dist/K16/production\Klondike.X.production.obj
 "C:\firmware-fresh-mod/usb_descriptors.c":165 88D strings STRING
 "C:\firmware-fresh-mod\Klondike.X\klondike.c":25 89F strings STRING
 "C:\firmware-fresh-mod/usb_descriptors.c":224 8AB strings STRING
-"C:\firmware-fresh-mod\Klondike.X\main.c":314 8AF text57 CODE
-"C:\firmware-fresh-mod\Klondike.X\main.c":338 8B0 text56 CODE
+"C:\firmware-fresh-mod\Klondike.X\main.c":338 8AF text56 CODE
+"C:\firmware-fresh-mod\Klondike.X\main.c":377 8B0 text55 CODE
 "C:\firmware-fresh-mod\Klondike.X\asic.c":60 8D8 text11 CODE
 "C:\firmware-fresh-mod\Klondike.X\asic.c":61 8D9 text11 CODE
 "C:\firmware-fresh-mod\Klondike.X\asic.c":62 8DA text11 CODE
@@ -528,30 +533,30 @@ $dist/K16/production\Klondike.X.production.obj
 "C:\firmware-fresh-mod/USB/usb_device.c":2104 ADF text32 CODE
 "C:\firmware-fresh-mod/USB/usb_device.c":2106 AE3 text32 CODE
 "C:\firmware-fresh-mod/USB/usb_device.c":2107 AE5 text32 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":192 AE6 text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":191 AE6 text61 CODE
 "C:\firmware-fresh-mod/USB/usb_device.c":2110 AE6 text32 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":193 AE8 text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":195 AED text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":196 AF0 text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":198 AF1 text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":199 AF6 text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":200 AF9 text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":201 B1B text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":203 B1C text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":204 B26 text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":205 B2C text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":207 B2D text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":208 B30 text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":209 B34 text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":211 B3A text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":215 B3B text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":216 B40 text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":217 B52 text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":218 B67 text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":222 B91 text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":223 B94 text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":224 B96 text61 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":225 B98 text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":192 AE8 text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":194 AED text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":195 AF0 text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":197 AF1 text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":198 AF6 text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":199 AF9 text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":200 B1B text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":202 B1C text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":203 B26 text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":204 B2C text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":206 B2D text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":207 B30 text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":208 B34 text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":210 B3A text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":214 B3B text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":215 B40 text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":216 B52 text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":217 B67 text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":221 B91 text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":222 B94 text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":223 B96 text61 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":224 B98 text61 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\ftmul.c":56 B99 text24 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\ftmul.c":57 BA9 text24 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\ftmul.c":58 BB0 text24 CODE
@@ -578,16 +583,16 @@ $dist/K16/production\Klondike.X.production.obj
 "C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\ftmul.c":82 C31 text24 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\ftmul.c":83 C35 text24 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\ftmul.c":84 C4D text24 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":149 C4D text18 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":152 C53 text18 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":153 C6E text18 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":155 CA6 text18 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":156 CAF text18 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":157 CB8 text18 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":156 CF8 text18 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":159 CFD text18 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":160 D02 text18 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":161 D04 text18 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":148 C4D text18 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":151 C53 text18 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":152 C6E text18 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":154 CA6 text18 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":155 CAF text18 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":156 CB8 text18 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":155 CF8 text18 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":158 CFD text18 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":159 D02 text18 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":160 D04 text18 CODE
 "C:\firmware-fresh-mod/USB/usb_device.c":757 D05 text28 CODE
 "C:\firmware-fresh-mod/USB/usb_device.c":760 D09 text28 CODE
 "C:\firmware-fresh-mod/USB/usb_device.c":763 D0B text28 CODE
@@ -733,21 +738,21 @@ $dist/K16/production\Klondike.X.production.obj
 "C:\firmware-fresh-mod/USB/usb_device.c":3124 FEA text35 CODE
 "C:\firmware-fresh-mod/USB/usb_device.c":3128 FF7 text35 CODE
 "C:\firmware-fresh-mod/USB/usb_device.c":3129 FFF text35 CODE
-"C:\firmware-fresh-mod\Klondike.X\main.c":410 1000 text53 CODE
 "C:\firmware-fresh-mod/USB/usb_device.c":3131 1000 text35 CODE
-"C:\firmware-fresh-mod\Klondike.X\main.c":411 1002 text53 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":167 1003 text20 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":168 100A text20 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":170 100B text20 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":171 1023 text20 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":172 1026 text20 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":175 1028 text20 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":179 102E text20 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":180 1036 text20 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":181 1037 text20 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":182 103D text20 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":183 103F text20 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":188 1042 text20 CODE
+"C:\firmware-fresh-mod\Klondike.X\main.c":281 1001 text58 CODE
+"C:\firmware-fresh-mod\Klondike.X\main.c":314 1002 text57 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":166 1003 text20 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":167 100A text20 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":169 100B text20 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":170 1023 text20 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":171 1026 text20 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":174 1028 text20 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":178 102E text20 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":179 1036 text20 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":180 1037 text20 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":181 103D text20 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":182 103F text20 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":187 1042 text20 CODE
 "C:\firmware-fresh-mod/USB/usb_device.c":2840 1042 text34 CODE
 "C:\firmware-fresh-mod/USB/usb_device.c":2845 104A text34 CODE
 "C:\firmware-fresh-mod/USB/usb_device.c":2846 104C text34 CODE
@@ -912,16 +917,16 @@ $dist/K16/production\Klondike.X.production.obj
 "C:\firmware-fresh-mod/USB/usb_device.c":2176 1417 text38 CODE
 "C:\firmware-fresh-mod/USB/usb_device.c":2180 1418 text38 CODE
 "C:\firmware-fresh-mod/USB/usb_device.c":2185 1426 text38 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":111 142C text6 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":110 142C text6 CODE
 "C:\firmware-fresh-mod/USB/usb_device.c":2187 142C text38 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":112 1450 text6 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":113 1476 text6 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":114 1499 text6 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":115 149F text6 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":116 14A2 text6 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":117 14A5 text6 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":118 14AB text6 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":119 14AD text6 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":111 1450 text6 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":112 1476 text6 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":113 1499 text6 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":114 149F text6 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":115 14A2 text6 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":116 14A5 text6 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":117 14AB text6 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":118 14AD text6 CODE
 "C:\firmware-fresh-mod/USB/usb_device.c":1943 14AE text42 CODE
 "C:\firmware-fresh-mod/USB/usb_device.c":1944 14B3 text42 CODE
 "C:\firmware-fresh-mod/USB/usb_device.c":1946 14BB text42 CODE
@@ -1031,7 +1036,6 @@ $dist/K16/production\Klondike.X.production.obj
 "C:\firmware-fresh-mod\Klondike.X\main.c":214 17FA text4 CODE
 "C:\firmware-fresh-mod\Klondike.X\main.c":223 1800 text4 CODE
 "C:\firmware-fresh-mod/USB/usb_device.c":2842 1800 swtext1 CONST
-"C:\firmware-fresh-mod\Klondike.X\main.c":281 1B5E text58 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\ftneg.c":17 1B5F text23 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\ftneg.c":18 1B65 text23 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\ftneg.c":20 1B67 text23 CODE
@@ -1053,20 +1057,20 @@ $dist/K16/production\Klondike.X.production.obj
 "C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\bmul.c":11 1B9E text5 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\bmul.c":12 1BA1 text5 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\bmul.c":13 1BA3 text5 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":313 1BA3 text14 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":314 1BA5 text14 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":315 1BA7 text14 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":316 1BA8 text14 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":317 1BA9 text14 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":318 1BAA text14 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":319 1BAB text14 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":320 1BAC text14 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":321 1BAE text14 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":322 1BAF text14 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":323 1BB0 text14 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":324 1BB1 text14 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":325 1BB3 text14 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":326 1BB5 text14 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":312 1BA3 text14 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":313 1BA5 text14 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":314 1BA7 text14 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":315 1BA8 text14 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":316 1BA9 text14 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":317 1BAA text14 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":318 1BAB text14 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":319 1BAC text14 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":320 1BAE text14 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":321 1BAF text14 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":322 1BB0 text14 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":323 1BB1 text14 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":324 1BB3 text14 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":325 1BB5 text14 CODE
 "C:\firmware-fresh-mod\Klondike.X\main.c":171 1BB6 text13 CODE
 "C:\firmware-fresh-mod\Klondike.X\main.c":172 1BBA text13 CODE
 "C:\firmware-fresh-mod\Klondike.X\main.c":173 1BBD text13 CODE
@@ -1074,27 +1078,27 @@ $dist/K16/production\Klondike.X.production.obj
 "C:\firmware-fresh-mod\Klondike.X\main.c":176 1BC3 text13 CODE
 "C:\firmware-fresh-mod\Klondike.X\main.c":177 1BC6 text13 CODE
 "C:\firmware-fresh-mod\Klondike.X\main.c":179 1BC8 text13 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":297 1BC9 text15 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":298 1BCB text15 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":299 1BCC text15 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":300 1BCE text15 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":302 1BD1 text15 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":303 1BD3 text15 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":304 1BD4 text15 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":305 1BD5 text15 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":306 1BD6 text15 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":307 1BD9 text15 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":308 1BDB text15 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":309 1BDD text15 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":283 1BDE text16 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":286 1BE0 text16 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":287 1BE4 text16 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":288 1BE5 text16 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":289 1BE6 text16 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":290 1BEA text16 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":291 1BEC text16 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":292 1BEE text16 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":293 1BF4 text16 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":296 1BC9 text15 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":297 1BCB text15 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":298 1BCC text15 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":299 1BCE text15 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":301 1BD1 text15 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":302 1BD3 text15 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":303 1BD4 text15 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":304 1BD5 text15 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":305 1BD6 text15 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":306 1BD9 text15 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":307 1BDB text15 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":308 1BDD text15 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":282 1BDE text16 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":285 1BE0 text16 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":286 1BE4 text16 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":287 1BE5 text16 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":288 1BE6 text16 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":289 1BEA text16 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":290 1BEC text16 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":291 1BEE text16 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":292 1BF4 text16 CODE
 "C:\firmware-fresh-mod\Klondike.X\main.c":99 1BF5 maintext CODE
 "C:\firmware-fresh-mod\Klondike.X\main.c":119 1BF8 maintext CODE
 "C:\firmware-fresh-mod\Klondike.X\main.c":133 1BFB maintext CODE
@@ -1128,18 +1132,18 @@ $dist/K16/production\Klondike.X.production.obj
 "C:\firmware-fresh-mod\Klondike.X\main.c":162 1C50 text12 CODE
 "C:\firmware-fresh-mod\Klondike.X\main.c":164 1C53 text12 CODE
 "C:\firmware-fresh-mod\Klondike.X\main.c":166 1C55 text12 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":263 1C56 text17 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":264 1C58 text17 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":265 1C5A text17 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":266 1C5D text17 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":267 1C60 text17 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":268 1C65 text17 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":269 1C66 text17 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":270 1C68 text17 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":271 1C6C text17 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":272 1C6D text17 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":273 1C6F text17 CODE
-"C:\firmware-fresh-mod\Klondike.X\klondike.c":279 1C71 text17 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":262 1C56 text17 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":263 1C58 text17 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":264 1C5A text17 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":265 1C5D text17 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":266 1C60 text17 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":267 1C65 text17 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":268 1C66 text17 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":269 1C68 text17 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":270 1C6C text17 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":271 1C6D text17 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":272 1C6F text17 CODE
+"C:\firmware-fresh-mod\Klondike.X\klondike.c":278 1C71 text17 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\wmul.c":4 1C72 text64 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\wmul.c":7 1C74 text64 CODE
 "C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\wmul.c":8 1C76 text64 CODE
@@ -1384,8 +1388,8 @@ btemp 7E 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 _sd000 1156 0 STRING 0 strings dist/K16/production\Klondike.X.production.obj
 _sd001 100A 0 STRING 0 strings dist/K16/production\Klondike.X.production.obj
 _sd002 1072 0 STRING 0 strings dist/K16/production\Klondike.X.production.obj
-start 24 0 CODE 0 init C:\Users\Jojko\AppData\Local\Temp\s370.obj
-__end_of_USBCheckVendorRequest 8 0 CODE 0 text54 dist/K16/production\Klondike.X.production.obj
+start 24 0 CODE 0 init C:\Users\Jojko\AppData\Local\Temp\s1kk.obj
+__end_of_USBCheckVendorRequest 6 0 CODE 0 text54 dist/K16/production\Klondike.X.production.obj
 __size_of_USBCBWakeFromSuspend 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 ?___ftadd BD 0 BANK1 1 cstackBANK1 dist/K16/production\Klondike.X.production.obj
 ___fttol@f1 CA 0 BANK1 1 cstackBANK1 dist/K16/production\Klondike.X.production.obj
@@ -1401,7 +1405,7 @@ _USBBusIsSuspended 165 0 BANK2 1 bssBANK2 dist/K16/production\Klondike.X.product
 _TMR1L 16 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 _RCREG 199 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 _USBWakeFromSuspend 3818 0 CODE 0 text46 dist/K16/production\Klondike.X.production.obj
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Jojko\AppData\Local\Temp\s370.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Jojko\AppData\Local\Temp\s1kk.obj
 __size_of_USBWakeFromSuspend 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 _UADDR E96 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 _HashTime 6F 0 BANK0 1 dataBANK0 dist/K16/production\Klondike.X.production.obj
@@ -1440,7 +1444,7 @@ _IOCAF3 1C9B 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 __Hfunctab 0 0 CODE 0 functab -
 __Lfunctab 0 0 CODE 0 functab -
 _INPacket 220 0 ABS 1 - dist/K16/production\Klondike.X.production.obj
-__end_of_UpdateFanLevel F14 0 CODE 0 text21 dist/K16/production\Klondike.X.production.obj
+__end_of_UpdateFanLevel F10 0 CODE 0 text21 dist/K16/production\Klondike.X.production.obj
 _ResultRx 15CC 0 CODE 0 text61 dist/K16/production\Klondike.X.production.obj
 _SetupPkt 40 0 ABS 1 - dist/K16/production\Klondike.X.production.obj
 i1___bmul 3700 0 CODE 0 text63 dist/K16/production\Klondike.X.production.obj
@@ -1501,7 +1505,7 @@ __size_of_ProcessIO 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 _T1GSPM CC 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 __Hsfr0 0 0 ABS 0 sfr0 -
 __Lsfr0 0 0 ABS 0 sfr0 -
-__end_of_USBCBErrorHandler 6 0 CODE 0 text55 dist/K16/production\Klondike.X.production.obj
+__end_of_USBCBErrorHandler 1162 0 CODE 0 text55 dist/K16/production\Klondike.X.production.obj
 __Hsfr1 0 0 ABS 0 sfr1 -
 __Lsfr1 0 0 ABS 0 sfr1 -
 _USBDeferOUTDataStagePackets 167 0 BANK2 1 bssBANK2 dist/K16/production\Klondike.X.production.obj
@@ -1546,14 +1550,14 @@ _I2CCmd 64 0 BANK0 1 bssBANK0 dist/K16/production\Klondike.X.production.obj
 USBDeviceTasks@i BF 0 BANK1 1 cstackBANK1 dist/K16/production\Klondike.X.production.obj
 __size_of_InitResultRx 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 __size_of___ftpack 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
-_USBCtrlEPService F14 0 CODE 0 text29 dist/K16/production\Klondike.X.production.obj
+_USBCtrlEPService F10 0 CODE 0 text29 dist/K16/production\Klondike.X.production.obj
 __end_of_memset 39DA 0 CODE 0 text39 dist/K16/production\Klondike.X.production.obj
 __size_of___fttol 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 USBDeviceInit@p A0 0 BANK1 1 cstackBANK1 dist/K16/production\Klondike.X.production.obj
 __size_of_USBCtrlEPService 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 _SlaveAddress E2 0 BANK1 1 bssBANK1 dist/K16/production\Klondike.X.production.obj
 ___ftadd@sign C7 0 BANK1 1 cstackBANK1 dist/K16/production\Klondike.X.production.obj
-__end_of_USBCBWakeFromSuspend 1160 0 CODE 0 text57 dist/K16/production\Klondike.X.production.obj
+__end_of_USBCBWakeFromSuspend 2006 0 CODE 0 text57 dist/K16/production\Klondike.X.production.obj
 __Hcode 0 0 ABS 0 code -
 __Lcode 0 0 ABS 0 code -
 i1___bmul@product 73 0 COMMON 1 cstackCOMMON dist/K16/production\Klondike.X.production.obj
@@ -1588,7 +1592,7 @@ ___ftmul@sign B9 0 BANK1 1 cstackBANK1 dist/K16/production\Klondike.X.production
 end_of_initialization 255A 0 CODE 0 cinit dist/K16/production\Klondike.X.production.obj
 _NonceRanges 320 0 BANK6 1 bssBANK6 dist/K16/production\Klondike.X.production.obj
 ___awdiv@sign A2 0 BANK1 1 cstackBANK1 dist/K16/production\Klondike.X.production.obj
-__end_of_USBCBStdSetDscHandler 1000 0 CODE 0 text52 dist/K16/production\Klondike.X.production.obj
+__end_of_USBCBStdSetDscHandler 8 0 CODE 0 text52 dist/K16/production\Klondike.X.production.obj
 __end_of_DetectAsics 1A0A 0 CODE 0 text18 dist/K16/production\Klondike.X.production.obj
 _OUTPacket 2A0 0 ABS 1 - dist/K16/production\Klondike.X.production.obj
 ___bmul@multiplicand 5E 0 BANK0 1 cstackBANK0 dist/K16/production\Klondike.X.production.obj
@@ -1673,7 +1677,7 @@ _PrecalcHashes 340 0 BANK6 1 bssBANK6 dist/K16/production\Klondike.X.production.
 _PWM1DCL 611 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 AsicPreCalc@m 12C 0 BANK2 1 cstackBANK2 dist/K16/production\Klondike.X.production.obj
 _USBCtrlEPServiceComplete 2B72 0 CODE 0 text40 dist/K16/production\Klondike.X.production.obj
-_USBCheckVendorRequest 6 0 CODE 0 text54 dist/K16/production\Klondike.X.production.obj
+_USBCheckVendorRequest 4 0 CODE 0 text54 dist/K16/production\Klondike.X.production.obj
 ?___awtoft A5 0 BANK1 1 cstackBANK1 dist/K16/production\Klondike.X.production.obj
 _OSCTUNE 98 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 __end_of_USBCtrlTrfSetupHandler 3CEC 0 CODE 0 text33 dist/K16/production\Klondike.X.production.obj
@@ -1693,7 +1697,7 @@ __Lbank2 0 0 ABS 0 bank2 -
 _InitFAN 38AC 0 CODE 0 text17 dist/K16/production\Klondike.X.production.obj
 __Hbank3 0 0 ABS 0 bank3 -
 __Lbank3 0 0 ABS 0 bank3 -
-___latbits 2 0 ABS 0 - C:\Users\Jojko\AppData\Local\Temp\s370.obj
+___latbits 2 0 ABS 0 - C:\Users\Jojko\AppData\Local\Temp\s1kk.obj
 ___ftmul@exp B4 0 BANK1 1 cstackBANK1 dist/K16/production\Klondike.X.production.obj
 __Hbank4 0 0 ABS 0 bank4 -
 __Lbank4 0 0 ABS 0 bank4 -
@@ -1747,7 +1751,7 @@ _USBSuspend 3848 0 CODE 0 text45 dist/K16/production\Klondike.X.production.obj
 __Lclrtext 0 0 ABS 0 clrtext -
 _pBDTEntryEP0OutCurrent E6 0 BANK1 1 bssBANK1 dist/K16/production\Klondike.X.production.obj
 AsicPreCalc@K 120 0 BANK2 1 cstackBANK2 dist/K16/production\Klondike.X.production.obj
-_USBCBStdSetDscHandler FFE 0 CODE 0 text52 dist/K16/production\Klondike.X.production.obj
+_USBCBStdSetDscHandler 6 0 CODE 0 text52 dist/K16/production\Klondike.X.production.obj
 __size_of_USBStdFeatureReqHandler 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 __end_of_USBCtrlTrfOutHandler 3B7A 0 CODE 0 text31 dist/K16/production\Klondike.X.production.obj
 __size_of_USBEnableEndpoint 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
@@ -1835,7 +1839,7 @@ __CFG_MCLRE$OFF 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 _USER_USB_CALLBACK_EVENT_HANDLER 3BE8 0 CODE 0 text47 dist/K16/production\Klondike.X.production.obj
 _shortPacketStatus 6D 0 BANK0 1 bssBANK0 dist/K16/production\Klondike.X.production.obj
 __pcstackBANK2 120 0 BANK2 1 cstackBANK2 dist/K16/production\Klondike.X.production.obj
-__pidataBANK0 FFC 0 CODE 0 idataBANK0 dist/K16/production\Klondike.X.production.obj
+__pidataBANK0 FFE 0 CODE 0 idataBANK0 dist/K16/production\Klondike.X.production.obj
 __end_of_USBCtrlTrfRxService 15CC 0 CODE 0 text32 dist/K16/production\Klondike.X.production.obj
 __end_of_USBCtrlTrfTxService 2A64 0 CODE 0 text42 dist/K16/production\Klondike.X.production.obj
 SendCmdReply@data A4 0 BANK1 1 cstackBANK1 dist/K16/production\Klondike.X.production.obj
@@ -1908,7 +1912,7 @@ __Hbank16 0 0 BANK16 1 bank16 -
 _last_bit1 16E 0 BANK2 1 bssBANK2 dist/K16/production\Klondike.X.production.obj
 __Lbank16 0 0 BANK16 1 bank16 -
 _USBStatusStageEnabledFlag2 16B 0 BANK2 1 bssBANK2 dist/K16/production\Klondike.X.production.obj
-__ptext21 CA6 0 CODE 0 text21 dist/K16/production\Klondike.X.production.obj
+__ptext21 CA2 0 CODE 0 text21 dist/K16/production\Klondike.X.production.obj
 __ptext40 2B72 0 CODE 0 text40 dist/K16/production\Klondike.X.production.obj
 __Hbank26 0 0 BANK26 1 bank26 -
 __Lbank26 0 0 BANK26 1 bank26 -
@@ -1946,7 +1950,7 @@ _ADCON2bits 9F 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 __end_of_ProcessIO 2658 0 CODE 0 text1 dist/K16/production\Klondike.X.production.obj
 __ptext14 3746 0 CODE 0 text14 dist/K16/production\Klondike.X.production.obj
 __ptext33 3C66 0 CODE 0 text33 dist/K16/production\Klondike.X.production.obj
-__ptext52 FFE 0 CODE 0 text52 dist/K16/production\Klondike.X.production.obj
+__ptext52 6 0 CODE 0 text52 dist/K16/production\Klondike.X.production.obj
 __Hbank19 0 0 BANK19 1 bank19 -
 __Lbank19 0 0 BANK19 1 bank19 -
 __ptext24 1732 0 CODE 0 text24 dist/K16/production\Klondike.X.production.obj
@@ -1956,16 +1960,16 @@ __Hbank29 0 0 BANK29 1 bank29 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __ptext15 3792 0 CODE 0 text15 dist/K16/production\Klondike.X.production.obj
 __ptext34 2084 0 CODE 0 text34 dist/K16/production\Klondike.X.production.obj
-__ptext53 2000 0 CODE 0 text53 dist/K16/production\Klondike.X.production.obj
+__ptext53 FF8 0 CODE 0 text53 dist/K16/production\Klondike.X.production.obj
 USBTransferOnePacket@dir A0 0 BANK1 1 cstackBANK1 dist/K16/production\Klondike.X.production.obj
 __ptext25 1BE0 0 CODE 0 text25 dist/K16/production\Klondike.X.production.obj
 __ptext44 39DA 0 CODE 0 text44 dist/K16/production\Klondike.X.production.obj
 __ptext63 3700 0 CODE 0 text63 dist/K16/production\Klondike.X.production.obj
-__end_of_ProcessCmd CA6 0 CODE 0 text2 dist/K16/production\Klondike.X.production.obj
-_USBCB_SOF_Handler 1160 0 CODE 0 text56 dist/K16/production\Klondike.X.production.obj
+__end_of_ProcessCmd CA2 0 CODE 0 text2 dist/K16/production\Klondike.X.production.obj
+_USBCB_SOF_Handler 115E 0 CODE 0 text56 dist/K16/production\Klondike.X.production.obj
 __ptext16 37BC 0 CODE 0 text16 dist/K16/production\Klondike.X.production.obj
 __ptext35 1DCC 0 CODE 0 text35 dist/K16/production\Klondike.X.production.obj
-__ptext54 6 0 CODE 0 text54 dist/K16/production\Klondike.X.production.obj
+__ptext54 4 0 CODE 0 text54 dist/K16/production\Klondike.X.production.obj
 __HbssBANK3 0 0 ABS 0 bssBANK3 -
 __ptext26 3A24 0 CODE 0 text26 dist/K16/production\Klondike.X.production.obj
 __ptext45 3848 0 CODE 0 text45 dist/K16/production\Klondike.X.production.obj
@@ -1974,14 +1978,14 @@ __LbssBANK3 0 0 ABS 0 bssBANK3 -
 __size_of_USBCheckStdRequest 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 __ptext17 38AC 0 CODE 0 text17 dist/K16/production\Klondike.X.production.obj
 __ptext36 3EAC 0 CODE 0 text36 dist/K16/production\Klondike.X.production.obj
-__ptext55 4 0 CODE 0 text55 dist/K16/production\Klondike.X.production.obj
+__ptext55 1160 0 CODE 0 text55 dist/K16/production\Klondike.X.production.obj
 __pbssBANK3 1C7 0 BANK3 1 bssBANK3 dist/K16/production\Klondike.X.production.obj
 _ANSELBbits 18D 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 __ptext27 22D0 0 CODE 0 text27 dist/K16/production\Klondike.X.production.obj
 __ptext46 3818 0 CODE 0 text46 dist/K16/production\Klondike.X.production.obj
 __ptext18 189A 0 CODE 0 text18 dist/K16/production\Klondike.X.production.obj
 __ptext37 2658 0 CODE 0 text37 dist/K16/production\Klondike.X.production.obj
-__ptext56 1160 0 CODE 0 text56 dist/K16/production\Klondike.X.production.obj
+__ptext56 115E 0 CODE 0 text56 dist/K16/production\Klondike.X.production.obj
 __end_of_InitResultRx 376C 0 CODE 0 text14 dist/K16/production\Klondike.X.production.obj
 __ptext28 1A0A 0 CODE 0 text28 dist/K16/production\Klondike.X.production.obj
 __ptext47 3BE8 0 CODE 0 text47 dist/K16/production\Klondike.X.production.obj
@@ -1989,11 +1993,11 @@ ___fttol@sign1 D2 0 BANK1 1 cstackBANK1 dist/K16/production\Klondike.X.productio
 ?_USBTransferOnePacket A0 0 BANK1 1 cstackBANK1 dist/K16/production\Klondike.X.production.obj
 __ptext19 2202 0 CODE 0 text19 dist/K16/production\Klondike.X.production.obj
 __ptext38 2756 0 CODE 0 text38 dist/K16/production\Klondike.X.production.obj
-__ptext57 115E 0 CODE 0 text57 dist/K16/production\Klondike.X.production.obj
-__ptext29 F14 0 CODE 0 text29 dist/K16/production\Klondike.X.production.obj
+__ptext57 2004 0 CODE 0 text57 dist/K16/production\Klondike.X.production.obj
+__ptext29 F10 0 CODE 0 text29 dist/K16/production\Klondike.X.production.obj
 __ptext48 391E 0 CODE 0 text48 dist/K16/production\Klondike.X.production.obj
 __ptext39 3998 0 CODE 0 text39 dist/K16/production\Klondike.X.production.obj
-__ptext58 36BC 0 CODE 0 text58 dist/K16/production\Klondike.X.production.obj
+__ptext58 2002 0 CODE 0 text58 dist/K16/production\Klondike.X.production.obj
 _T1GCONbits 19 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 __HbssBANK4 0 0 ABS 0 bssBANK4 -
 __ptext49 3E10 0 CODE 0 text49 dist/K16/production\Klondike.X.production.obj
@@ -2036,32 +2040,32 @@ __Lreset_vec 0 0 CODE 0 reset_vec -
 __size_of_USBStdSetCfgHandler 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 __size_of_USBStdGetDscHandler 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 __end_of_USB_SD_Ptr 1008 0 STRING 0 strings dist/K16/production\Klondike.X.production.obj
-_USBCBErrorHandler 4 0 CODE 0 text55 dist/K16/production\Klondike.X.production.obj
-_USBCBCheckOtherReq 2000 0 CODE 0 text53 dist/K16/production\Klondike.X.production.obj
-_UpdateFanLevel CA6 0 CODE 0 text21 dist/K16/production\Klondike.X.production.obj
+_USBCBErrorHandler 1160 0 CODE 0 text55 dist/K16/production\Klondike.X.production.obj
+_USBCBCheckOtherReq FF8 0 CODE 0 text53 dist/K16/production\Klondike.X.production.obj
+_UpdateFanLevel CA2 0 CODE 0 text21 dist/K16/production\Klondike.X.production.obj
 __size_of_USER_USB_CALLBACK_EVENT_HANDLER 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
-__end_of_USBCB_SOF_Handler 1162 0 CODE 0 text56 dist/K16/production\Klondike.X.production.obj
+__end_of_USBCB_SOF_Handler 1160 0 CODE 0 text56 dist/K16/production\Klondike.X.production.obj
 __size_ofi1___wmul 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
-__end_of_USBCBSuspend 36BE 0 CODE 0 text58 dist/K16/production\Klondike.X.production.obj
+__end_of_USBCBSuspend 2004 0 CODE 0 text58 dist/K16/production\Klondike.X.production.obj
 _ProcessCmd$2059 C2 0 BANK1 1 cstackBANK1 dist/K16/production\Klondike.X.production.obj
-intlevel0 0 0 CODE 0 functab C:\Users\Jojko\AppData\Local\Temp\s370.obj
+intlevel0 0 0 CODE 0 functab C:\Users\Jojko\AppData\Local\Temp\s1kk.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 __size_of_ISRCode 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 _configDescriptor1 10DA 0 STRING 0 strings dist/K16/production\Klondike.X.production.obj
-intlevel1 0 0 CODE 0 functab C:\Users\Jojko\AppData\Local\Temp\s370.obj
-_USBCBSuspend 36BC 0 CODE 0 text58 dist/K16/production\Klondike.X.production.obj
+intlevel1 0 0 CODE 0 functab C:\Users\Jojko\AppData\Local\Temp\s1kk.obj
+_USBCBSuspend 2002 0 CODE 0 text58 dist/K16/production\Klondike.X.production.obj
 _ProcessIO 2560 0 CODE 0 text1 dist/K16/production\Klondike.X.production.obj
-intlevel2 0 0 CODE 0 functab C:\Users\Jojko\AppData\Local\Temp\s370.obj
+intlevel2 0 0 CODE 0 functab C:\Users\Jojko\AppData\Local\Temp\s1kk.obj
 __end_of___awtoft 3A72 0 CODE 0 text26 dist/K16/production\Klondike.X.production.obj
-__end_of_USBCBCheckOtherReq 2006 0 CODE 0 text53 dist/K16/production\Klondike.X.production.obj
-intlevel3 0 0 CODE 0 functab C:\Users\Jojko\AppData\Local\Temp\s370.obj
+__end_of_USBCBCheckOtherReq FFE 0 CODE 0 text53 dist/K16/production\Klondike.X.production.obj
+intlevel3 0 0 CODE 0 functab C:\Users\Jojko\AppData\Local\Temp\s1kk.obj
 __size_of_InitWorkTick 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 i1SendCmdReply@data 78 0 COMMON 1 cstackCOMMON dist/K16/production\Klondike.X.production.obj
 _USBCtrlTrfTxService 295C 0 CODE 0 text42 dist/K16/production\Klondike.X.production.obj
 USBDeviceInit@i A3 0 BANK1 1 cstackBANK1 dist/K16/production\Klondike.X.production.obj
-intlevel4 0 0 CODE 0 functab C:\Users\Jojko\AppData\Local\Temp\s370.obj
+intlevel4 0 0 CODE 0 functab C:\Users\Jojko\AppData\Local\Temp\s1kk.obj
 USBStdFeatureReqHandler@pUEP B3 0 BANK1 1 cstackBANK1 dist/K16/production\Klondike.X.production.obj
-intlevel5 0 0 CODE 0 functab C:\Users\Jojko\AppData\Local\Temp\s370.obj
+intlevel5 0 0 CODE 0 functab C:\Users\Jojko\AppData\Local\Temp\s1kk.obj
 __size_of_Send32 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 _ResultQC 162 0 BANK2 1 bssBANK2 dist/K16/production\Klondike.X.production.obj
 __size_of_USBSuspend 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
@@ -2089,13 +2093,13 @@ __CFG_IESO$OFF 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 __pmaintext 37EA 0 CODE 0 maintext dist/K16/production\Klondike.X.production.obj
 __end_of___fttol 2B72 0 CODE 0 text22 dist/K16/production\Klondike.X.production.obj
 _OPTION_REGbits 95 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
-__end_of_USBCtrlEPService FFC 0 CODE 0 text29 dist/K16/production\Klondike.X.production.obj
+__end_of_USBCtrlEPService FF8 0 CODE 0 text29 dist/K16/production\Klondike.X.production.obj
 __Hinittext 0 0 ABS 0 inittext -
 __CFG_FOSC$INTOSC 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
 __Linittext 0 0 ABS 0 inittext -
 __end_of_USBStallHandler 3A24 0 CODE 0 text44 dist/K16/production\Klondike.X.production.obj
 __size_of_USBCheckVendorRequest 0 0 ABS 0 - dist/K16/production\Klondike.X.production.obj
-_USBCBWakeFromSuspend 115E 0 CODE 0 text57 dist/K16/production\Klondike.X.production.obj
+_USBCBWakeFromSuspend 2004 0 CODE 0 text57 dist/K16/production\Klondike.X.production.obj
 __end_of_USBDeviceTasks 1BE0 0 CODE 0 text28 dist/K16/production\Klondike.X.production.obj
 __initialization 2482 0 CODE 0 cinit dist/K16/production\Klondike.X.production.obj
 _USBStdGetStatusHandler 3EAC 0 CODE 0 text36 dist/K16/production\Klondike.X.production.obj
@@ -2149,7 +2153,7 @@ dataBANK3 1 1A0 1A0 46 1 BANK3
 dataBANK7 1 3A0 3A0 20 1 BANK7
 cstackBANK0 1 50 50 20 1 BANK0
 bssBANK4 1 260 260 10 1 BANK4
-text35 0 EE6 1DCC 11D 2 CODE
+text35 0 EE6 1DCC 11A 2 CODE
 text25 0 DF0 1BE0 F6 2 CODE
 text28 0 D05 1A0A EB 2 CODE
 text18 0 C4D 189A B8 2 CODE
@@ -2209,7 +2213,8 @@ text63 0 1B80 3700 11 2 CODE
 clrtext 0 1B74 36E8 C 2 CODE
 inittext 0 1B68 36D0 C 2 CODE
 text23 0 1B5F 36BE 9 2 CODE
-text54 0 3 6 1 2 CODE
-text56 0 8B0 1160 1 2 CODE
-text57 0 8AF 115E 1 2 CODE
-text58 0 1B5E 36BC 1 2 CODE
+text52 0 3 6 1 2 CODE
+text55 0 8B0 1160 1 2 CODE
+text56 0 8AF 115E 1 2 CODE
+text57 0 1002 2004 1 2 CODE
+text58 0 1001 2002 1 2 CODE
