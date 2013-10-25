@@ -295,7 +295,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _InitTempSensor InitTempSensor `(v  1 e 0 0 ]
 "296
 [v _InitWorkTick InitWorkTick `(v  1 e 0 0 ]
-"313
+"312
 [v _InitResultRx InitResultRx `(v  1 e 0 0 ]
 "70 C:\firmware-fresh-mod\Klondike.X\main.c
 [v _ISRCode ISRCode `II(v  1 e 0 0 ]
@@ -635,13 +635,13 @@ EVENT_TRANSFER_TERMINATED 5
 ]
 [u S1802 . 1 `S1790 1 . 1 0 `S1794 1 . 1 0 ]
 [v _T2CONbits T2CONbits `VES1802  1 e 1 @28 ]
-[s S1597 . 1 `uc 1 . 1 0 :4:0 
+[s S1586 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 LATA4 1 0 :1:4 
 `uc 1 LATA5 1 0 :1:5 
 ]
 "982
-[u S1601 . 1 `S1597 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES1601  1 e 1 @140 ]
+[u S1590 . 1 `S1586 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES1590  1 e 1 @140 ]
 [s S1460 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TRISB4 1 0 :1:4 
 `uc 1 TRISB5 1 0 :1:5 
@@ -723,7 +723,7 @@ EVENT_TRANSFER_TERMINATED 5
 [u S1855 . 1 `S1847 1 . 1 0 `S1850 1 . 1 0 ]
 [v _ADCON2bits ADCON2bits `VES1855  1 e 1 @159 ]
 "1827
-[v _LATAbits LATAbits `VES1601  1 e 1 @268 ]
+[v _LATAbits LATAbits `VES1590  1 e 1 @268 ]
 "1879
 [v _LATC LATC `VEuc  1 e 1 @270 ]
 "1896
@@ -1059,15 +1059,15 @@ EVENT_TRANSFER_TERMINATED 5
 {
 "179
 } 0
-"313 C:\firmware-fresh-mod\Klondike.X\klondike.c
+"312 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _InitResultRx InitResultRx `(v  1 e 0 0 ]
 {
-"329
+"326
 } 0
 "296
 [v _InitWorkTick InitWorkTick `(v  1 e 0 0 ]
 {
-"310
+"309
 } 0
 "282
 [v _InitTempSensor InitTempSensor `(v  1 e 0 0 ]

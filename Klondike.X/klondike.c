@@ -47,6 +47,7 @@ void ProcessCmd(char *cmd)
     // we already know address is ours here
     switch(cmd[0]) {
         case 'W': // queue new work
+            HASH_CLK_EN = 1;
             if( Status.WorkQC < MAX_WORK_COUNT-1 ) {
                 WorkQue[ (WorkNow + Status.WorkQC++) & WORKMASK ] = *(WORKTASK *)(cmd+2);
                 if(Status.State == 'R') {
@@ -83,7 +84,6 @@ void ProcessCmd(char *cmd)
                 else
                     ClockCfg[0] = ((DWORD)Cfg.HashClock << 18) | CLOCK_LOW_CHG;
                 HashTime = 256 - ((WORD)TICK_TOTAL/Cfg.HashClock);
-                // PWM1DCH = Cfg.FanTarget;
                 TempTarget = Cfg.TempTarget;
             }
             SendCmdReply(cmd, (char *)&Cfg, sizeof(Cfg));
@@ -156,7 +156,7 @@ void DetectAsics(void)
     for(BYTE x = 1; x < BankSize; x++)
         NonceRanges[x] = NonceRanges[x-1] + BankRanges[BankSize-1];
 
-    Status.State ='R';
+    Status.State = 'R';
     Status.HashCount = 0;
 }
 
@@ -298,7 +298,6 @@ void InitWorkTick(void)
     OPTION_REGbits.PSA = 0;
     OPTION_REGbits.PS = 7;
     TMR0 = HashTime;
-    //TMR0IE = 1;
 
     HASH_TRIS_0P = 0;
     HASH_TRIS_0N = 0;
@@ -306,7 +305,7 @@ void InitWorkTick(void)
     HASH_TRIS_1N = 0;
     HASH_IDLE();
     HASH_CLK_TRIS = 0;
-    HASH_CLK_EN = 1;
+    HASH_CLK_EN = 0;
 }
 
 void InitResultRx(void)
@@ -318,11 +317,9 @@ void InitResultRx(void)
     BAUDCONbits.SCKP = 0;
     BAUDCONbits.BRG16 = 1;
     ANSELBbits.ANSB5 = 0;
-    //PIE1bits.RCIE = 1;
     IOCBPbits.IOCBP7 = 1;
     INTCONbits.IOCIE = 1;
     IOCBF = 0;
-    //INTCONbits.PEIE = 1;
     INTCONbits.GIE = 1;
     RCSTAbits.CREN = 1;
     RCREG = 0xFF;

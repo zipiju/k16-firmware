@@ -5,7 +5,7 @@ Linker command line:
 -W9 --edf=C:\Program Files (x86)\Microchip\xc8\v1.20\dat\en_msgs.txt -cs \
   -h+dist/K16/production\Klondike.X.production.sym \
   --cmf=dist/K16/production\Klondike.X.production.cmf -z -Q16LF1459 \
-  -oC:\Users\Jojko\AppData\Local\Temp\s32c.6 \
+  -oC:\Users\Jojko\AppData\Local\Temp\s370.6 \
   -Mdist/K16/production/Klondike.X.production.map -E1 -ver=XC8 \
   -ACONST=00h-0FFhx32 -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
   -AENTRY=00h-0FFhx32 -ASTRING=00h-0FFhx32 -ACOMMON=070h-07Fh \
@@ -30,7 +30,7 @@ Linker command line:
   -ppowerup=CODE -pfunctab=CODE -ACONFIG=08007h-08008h -pconfig=CONFIG \
   -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\Jojko\AppData\Local\Temp\s32c.obj \
+  C:\Users\Jojko\AppData\Local\Temp\s370.obj \
   dist/K16/production\Klondike.X.production.obj 
 
 Object code version is 3.11
@@ -40,7 +40,7 @@ Machine type is 16LF1459
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Jojko\AppData\Local\Temp\s32c.obj
+C:\Users\Jojko\AppData\Local\Temp\s370.obj
                 end_init                             12       12        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2    1000E       0
@@ -51,13 +51,13 @@ dist/K16/production\Klondike.X.production.obj
                 text62                             1641     1641       93     2C82       0
                 text61                              AE6      AE6       B3     15CC       0
                 text59                              984      984       B0     1308       0
-                text58                             1001     1001        1     2002       0
-                text57                             1002     1002        1     2004       0
-                text56                              8AF      8AF        1     115E       0
-                text55                              8B0      8B0        1     1160       0
-                text54                                2        2        1        0       0
-                text53                              7FC      7FC        3        8       0
-                text52                                3        3        1        6       0
+                text58                             1B5E     1B5E        1     36BC       0
+                text57                              8AF      8AF        1     115E       0
+                text56                              8B0      8B0        1     1160       0
+                text55                                2        2        1        0       0
+                text54                                3        3        1        6       0
+                text53                             1000     1000        3     1DCC       0
+                text52                              7FF      7FF        1        8       0
                 text51                             1EBB     1EBB       4D     3D76       0
                 text50                             1D60     1D60       2A     3AC0       0
                 text49                             1F08     1F08       4E     3E10       0
@@ -81,7 +81,7 @@ dist/K16/production\Klondike.X.production.obj
                 text32                              A34      A34       B2     1468       0
                 text31                             1D8A     1D8A       33     3B14       0
                 text30                             109B     109B       66     2136       0
-                text29                              788      788       74        8       0
+                text29                              78A      78A       74        8       0
                 text28                              D05      D05       EB     1A0A       0
                 text27                             1168     1168       6B     22D0       0
                 text26                             1D12     1D12       27     3A24       0
@@ -89,7 +89,7 @@ dist/K16/production\Klondike.X.production.obj
                 text24                              B99      B99       B4     1732       0
                 text23                             1B5F     1B5F        9     36BE       0
                 text22                             1532     1532       87     2A64       0
-                text21                              651      651      137        8       0
+                text21                              653      653      137        8       0
                 text20                             1003     1003       3F     2006       0
                 text19                             1101     1101       67     2202       0
                 text18                              C4D      C4D       B8     189A       0
@@ -108,7 +108,7 @@ dist/K16/production\Klondike.X.production.obj
                 text5                              1B91     1B91       12     3722       0
                 text4                              1769     1769       97     2ED2       0
                 text3                              1E76     1E76       45     3CEC       0
-                text2                               4E1      4E1      170        8       0
+                text2                               4E1      4E1      172        8       0
                 text1                              12B0     12B0       7C     2560       0
                 maintext                           1BF5     1BF5       17     37EA       0
                 cstackBANK0                          50       50       12       50       1
@@ -131,7 +131,7 @@ dist/K16/production\Klondike.X.production.obj
                 strings                             800      800       AF     1000       0
                 idataBANK7                         1CAC     1CAC       20     3958       0
                 idataBANK3                          8B1      8B1       27     1162       0
-                idataBANK0                          7FF      7FF        1        8       0
+                idataBANK0                          7FE      7FE        1        8       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CONST          
@@ -146,13 +146,13 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text62                             1641     1641       93         0
                 text61                              AE6      AE6       B3         0
                 text59                              984      984       B0         0
-                text58                             1001     1001        1         0
-                text57                             1002     1002        1         0
-                text56                              8AF      8AF        1         0
-                text55                              8B0      8B0        1         0
-                text54                                2        2        1         0
-                text53                              7FC      7FC        3         0
-                text52                                3        3        1         0
+                text58                             1B5E     1B5E        1         0
+                text57                              8AF      8AF        1         0
+                text56                              8B0      8B0        1         0
+                text55                                2        2        1         0
+                text54                                3        3        1         0
+                text53                             1000     1000        3         0
+                text52                              7FF      7FF        1         0
                 text51                             1EBB     1EBB       4D         0
                 text50                             1D60     1D60       2A         0
                 text49                             1F08     1F08       4E         0
@@ -175,7 +175,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text32                              A34      A34       B2         0
                 text31                             1D8A     1D8A       33         0
                 text30                             109B     109B       66         0
-                text29                              788      788       74         0
+                text29                              78A      78A       74         0
                 text28                              D05      D05       EB         0
                 text27                             1168     1168       6B         0
                 text26                             1D12     1D12       27         0
@@ -183,7 +183,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text24                              B99      B99       B4         0
                 text23                             1B5F     1B5F        9         0
                 text22                             1532     1532       87         0
-                text21                              651      651      137         0
+                text21                              653      653      137         0
                 text20                             1003     1003       3F         0
                 text19                             1101     1101       67         0
                 text18                              C4D      C4D       B8         0
@@ -202,7 +202,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text5                              1B91     1B91       12         0
                 text4                              1769     1769       97         0
                 text3                              1E76     1E76       45         0
-                text2                               4E1      4E1      170         0
+                text2                               4E1      4E1      172         0
                 text1                              12B0     12B0       7C         0
                 maintext                           1BF5     1BF5       17         0
                 inittext                           1B68     1B68        C         0
@@ -210,7 +210,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 cinit                              1241     1241       6F         0
                 idataBANK7                         1CAC     1CAC       20         0
                 idataBANK3                          8B1      8B1       27         0
-                idataBANK0                          7FF      7FF        1         0
+                idataBANK0                          7FE      7FE        1         0
 
         CLASS   STRCODE        
 
@@ -389,7 +389,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
-                text52                         000003  000001  000004         6       0  CODE        2
+                text54                         000003  000001  000004         6       0  CODE        2
                 intentry                       000004  0007FC  000800         8       0  CODE        2
                 cstackBANK0                    000050  000020  000070        50       1  BANK0       1
                 cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
@@ -400,8 +400,8 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 bssBANK6                       000320  000038  000358       320       1  BANK6       1
                 dataBANK7                      0003A0  000020  0003C0       3A0       1  BANK7       1
                 strings                        000800  0000AF  0008AF      1000       0  STRING      2
-                text56                         0008AF  000001  0008B0      115E       0  CODE        2
-                text55                         0008B0  000001  0008B1      1160       0  CODE        2
+                text57                         0008AF  000001  0008B0      115E       0  CODE        2
+                text56                         0008B0  000001  0008B1      1160       0  CODE        2
                 idataBANK3                     0008B1  000027  0008D8      1162       0  CODE        2
                 text11                         0008D8  0000AC  000984      11B0       0  CODE        2
                 text59                         000984  0000B0  000A34      1308       0  CODE        2
@@ -411,9 +411,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 text18                         000C4D  0000B8  000D05      189A       0  CODE        2
                 text28                         000D05  0000EB  000DF0      1A0A       0  CODE        2
                 text25                         000DF0  0000F6  000EE6      1BE0       0  CODE        2
-                text35                         000EE6  00011A  001000      1DCC       0  CODE        2
-                text58                         001001  000001  001002      2002       0  CODE        2
-                text57                         001002  000001  001003      2004       0  CODE        2
+                text35                         000EE6  00011D  001003      1DCC       0  CODE        2
                 text20                         001003  00003F  001042      2006       0  CODE        2
                 text34                         001042  000059  00109B      2084       0  CODE        2
                 text30                         00109B  000066  001101      2136       0  CODE        2
@@ -432,6 +430,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 text10                         0016D4  000095  001769      2DA8       0  CODE        2
                 text4                          001769  000097  001800      2ED2       0  CODE        2
                 swtext1                        001800  00001A  00181A      3000       0  CONST       2
+                text58                         001B5E  000001  001B5F      36BC       0  CODE        2
                 text23                         001B5F  000009  001B68      36BE       0  CODE        2
                 inittext                       001B68  00000C  001B74      36D0       0  CODE        2
                 clrtext                        001B74  00000C  001B80      36E8       0  CODE        2
@@ -477,12 +476,9 @@ UNUSED ADDRESS RANGES
         BANK8            00420-0046F              50           1
         BANK9            004A0-004EF              50           1
         BIGRAM           02000-023EF             3F0           1
-        CODE             01000-01000               1           2
-                         0181A-01B5E             345
-        CONST            01000-01000               1           2
-                         0181A-01B5E             100
-        ENTRY            01000-01000               1           2
-                         0181A-01B5E             100
+        CODE             0181A-01B5D             344           2
+        CONST            0181A-01B5D             100           2
+        ENTRY            0181A-01B5D             100           2
         IDLOC            08000-08003               4           2
         RAM              001E6-001EF               A           1
                          002E0-002EF              10
@@ -523,10 +519,8 @@ UNUSED ADDRESS RANGES
         SFR7             00380-0039F              20           1
         SFR8             00400-0041F              20           1
         SFR9             00480-0049F              20           1
-        STRCODE          01000-01000               1           2
-                         0181A-01B5E             345
-        STRING           01000-01000               1           2
-                         0181A-01B5E             100
+        STRCODE          0181A-01B5D             344           2
+        STRING           0181A-01B5D             100           2
 
                                   Symbol Table
 
@@ -726,19 +720,19 @@ _UIRbits                                  (abs)        00E90
 _USBActiveConfiguration                   bssBANK1     000EC
 _USBAlternateInterface                    bssBANK1     000ED
 _USBBusIsSuspended                        bssBANK2     00165
-_USBCBCheckOtherReq                       text53       007FC
-_USBCBErrorHandler                        text55       008B0
+_USBCBCheckOtherReq                       text53       01000
+_USBCBErrorHandler                        text55       00002
 _USBCBInitEP                              text48       01C8F
-_USBCBStdSetDscHandler                    text52       00003
-_USBCBSuspend                             text58       01001
-_USBCBWakeFromSuspend                     text57       01002
-_USBCB_SOF_Handler                        text56       008AF
+_USBCBStdSetDscHandler                    text52       007FF
+_USBCBSuspend                             text58       01B5E
+_USBCBWakeFromSuspend                     text57       008AF
+_USBCB_SOF_Handler                        text56       008B0
 _USBCheckStdRequest                       text34       01042
-_USBCheckVendorRequest                    text54       00002
+_USBCheckVendorRequest                    text54       00003
 _USBConfigureEndpoint                     text51       01EBB
 _USBCtrlEPAllowDataStage                  text41       01FA9
 _USBCtrlEPAllowStatusStage                text43       011D3
-_USBCtrlEPService                         text29       00788
+_USBCtrlEPService                         text29       0078A
 _USBCtrlEPServiceComplete                 text40       015B9
 _USBCtrlTrfInHandler                      text30       0109B
 _USBCtrlTrfOutHandler                     text31       01D8A
@@ -770,7 +764,7 @@ _USB_SD_Ptr                               strings      00801
 _USER_USB_CALLBACK_EVENT_HANDLER          text47       01DF4
 _USTAT                                    (abs)        00E8F
 _USTATcopy                                bssBANK1     000EE
-_UpdateFanLevel                           text21       00651
+_UpdateFanLevel                           text21       00653
 _UpdateFanLevel$2876                      cstackBANK1  000DC
 _UserInit                                 text13       01BB6
 _WQI                                      bssBANK1     000EF
@@ -1047,25 +1041,25 @@ __end_of_InitResultRx                     text14       01BB6
 __end_of_InitTempSensor                   text16       01BF5
 __end_of_InitWorkTick                     text15       01BDE
 __end_of_InitializeSystem                 text12       01C56
-__end_of_ProcessCmd                       text2        00651
+__end_of_ProcessCmd                       text2        00653
 __end_of_ProcessIO                        text1        0132C
 __end_of_ResultRx                         text61       00B99
 __end_of_Send32                           text11       00984
 __end_of_SendAsicData                     text10       01769
 __end_of_SendCmdReply                     text4        01800
-__end_of_USBCBCheckOtherReq               text53       007FF
-__end_of_USBCBErrorHandler                text55       008B1
+__end_of_USBCBCheckOtherReq               text53       01003
+__end_of_USBCBErrorHandler                text55       00003
 __end_of_USBCBInitEP                      text48       01CAC
-__end_of_USBCBStdSetDscHandler            text52       00004
-__end_of_USBCBSuspend                     text58       01002
-__end_of_USBCBWakeFromSuspend             text57       01003
-__end_of_USBCB_SOF_Handler                text56       008B0
+__end_of_USBCBStdSetDscHandler            text52       00800
+__end_of_USBCBSuspend                     text58       01B5F
+__end_of_USBCBWakeFromSuspend             text57       008B0
+__end_of_USBCB_SOF_Handler                text56       008B1
 __end_of_USBCheckStdRequest               text34       0109B
-__end_of_USBCheckVendorRequest            text54       00003
+__end_of_USBCheckVendorRequest            text54       00004
 __end_of_USBConfigureEndpoint             text51       01F08
 __end_of_USBCtrlEPAllowDataStage          text41       02000
 __end_of_USBCtrlEPAllowStatusStage        text43       01241
-__end_of_USBCtrlEPService                 text29       007FC
+__end_of_USBCtrlEPService                 text29       007FE
 __end_of_USBCtrlEPServiceComplete         text40       01641
 __end_of_USBCtrlTrfInHandler              text30       01101
 __end_of_USBCtrlTrfOutHandler             text31       01DBD
@@ -1086,7 +1080,7 @@ __end_of_USBWakeFromSuspend               text46       01C24
 __end_of_USB_CD_Ptr                       strings      00805
 __end_of_USB_SD_Ptr                       strings      00804
 __end_of_USER_USB_CALLBACK_EVENT_HANDLER  text47       01E33
-__end_of_UpdateFanLevel                   text21       00788
+__end_of_UpdateFanLevel                   text21       0078A
 __end_of_UserInit                         text13       01BC9
 __end_of_WorkTick                         text20       01042
 __end_of___awdiv                          text19       01168
@@ -1127,7 +1121,7 @@ __pcstackCOMMON                           cstackCOMMON 00070
 __pdataBANK0                              dataBANK0    0006F
 __pdataBANK3                              dataBANK3    001A0
 __pdataBANK7                              dataBANK7    003A0
-__pidataBANK0                             idataBANK0   007FF
+__pidataBANK0                             idataBANK0   007FE
 __pidataBANK3                             idataBANK3   008B1
 __pidataBANK7                             idataBANK7   01CAC
 __pintentry                               intentry     00004
@@ -1148,7 +1142,7 @@ __ptext18                                 text18       00C4D
 __ptext19                                 text19       01101
 __ptext2                                  text2        004E1
 __ptext20                                 text20       01003
-__ptext21                                 text21       00651
+__ptext21                                 text21       00653
 __ptext22                                 text22       01532
 __ptext23                                 text23       01B5F
 __ptext24                                 text24       00B99
@@ -1156,7 +1150,7 @@ __ptext25                                 text25       00DF0
 __ptext26                                 text26       01D12
 __ptext27                                 text27       01168
 __ptext28                                 text28       00D05
-__ptext29                                 text29       00788
+__ptext29                                 text29       0078A
 __ptext3                                  text3        01E76
 __ptext30                                 text30       0109B
 __ptext31                                 text31       01D8A
@@ -1182,13 +1176,13 @@ __ptext49                                 text49       01F08
 __ptext5                                  text5        01B91
 __ptext50                                 text50       01D60
 __ptext51                                 text51       01EBB
-__ptext52                                 text52       00003
-__ptext53                                 text53       007FC
-__ptext54                                 text54       00002
-__ptext55                                 text55       008B0
-__ptext56                                 text56       008AF
-__ptext57                                 text57       01002
-__ptext58                                 text58       01001
+__ptext52                                 text52       007FF
+__ptext53                                 text53       01000
+__ptext54                                 text54       00003
+__ptext55                                 text55       00002
+__ptext56                                 text56       008B0
+__ptext57                                 text57       008AF
+__ptext58                                 text58       01B5E
 __ptext59                                 text59       00984
 __ptext6                                  text6        0142C
 __ptext61                                 text61       00AE6
@@ -1790,7 +1784,7 @@ Total ram usage:        0 bytes
 
  *************** function _InitResultRx *****************
  Defined at:
-		line 313 in file "klondike.c"
+		line 312 in file "klondike.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -3475,37 +3469,37 @@ asic.c estimated size: 1605
 
 klondike.c
 		_ResultRx      		CODE           	0AE6	0000	179
-		_UpdateFanLevel		CODE           	0651	0000	311
+		_UpdateFanLevel		CODE           	0653	0000	311
 		_WorkTick      		CODE           	1003	0000	63
 		_InitTempSensor		CODE           	1BDE	0000	23
 		_DetectAsics   		CODE           	0C4D	0000	184
 		_InitWorkTick  		CODE           	1BC9	0000	21
 		_AsicPushWork  		CODE           	142C	0000	130
-		_ProcessCmd    		CODE           	04E1	0000	368
+		_ProcessCmd    		CODE           	04E1	0000	370
 		_InitResultRx  		CODE           	1BA3	0000	19
 		_InitFAN       		CODE           	1C56	0000	28
 
-klondike.c estimated size: 1326
+klondike.c estimated size: 1328
 
 ../USB/usb_function_generic.c
-		_USBCheckVendor		CODE           	0002	0000	1
+		_USBCheckVendor		CODE           	0003	0000	1
 
 ../USB/usb_function_generic.c estimated size: 1
 
 main.c
-		_USBCBErrorHand		CODE           	08B0	0000	1
+		_USBCBErrorHand		CODE           	0002	0000	1
 		_UserInit      		CODE           	1BB6	0000	19
-		_USBCBWakeFromS		CODE           	1002	0000	1
+		_USBCBWakeFromS		CODE           	08AF	0000	1
 		_main          		CODE           	1BF5	0000	23
 		_USER_USB_CALLB		CODE           	1DF4	0000	63
-		_USBCBStdSetDsc		CODE           	0003	0000	1
+		_USBCBStdSetDsc		CODE           	07FF	0000	1
 		_SendCmdReply  		CODE           	1769	0000	151
 		_USBCBInitEP   		CODE           	1C8F	0000	29
 		_InitializeSyst		CODE           	1C3D	0000	25
 		_ProcessIO     		CODE           	12B0	0000	124
-		_USBCB_SOF_Hand		CODE           	08AF	0000	1
-		_USBCBSuspend  		CODE           	1001	0000	1
-		_USBCBCheckOthe		CODE           	07FC	0000	3
+		_USBCB_SOF_Hand		CODE           	08B0	0000	1
+		_USBCBSuspend  		CODE           	1B5E	0000	1
+		_USBCBCheckOthe		CODE           	1000	0000	3
 		_ISRCode       		CODE           	0004	0000	14
 
 main.c estimated size: 456
@@ -3539,7 +3533,7 @@ C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\ftneg.c estimated size: 9
 		_USBEnableEndpo		CODE           	1D60	0000	42
 		_USBConfigureEn		CODE           	1EBB	0000	77
 		_USBDeviceInit 		CODE           	0984	0000	176
-		_USBCtrlEPServi		CODE           	0788	0000	116
+		_USBCtrlEPServi		CODE           	078A	0000	116
 		_USBStallHandle		CODE           	1CED	0000	37
 		_USBDeviceTasks		CODE           	0D05	0000	235
 		_USBCheckStdReq		CODE           	1042	0000	89
