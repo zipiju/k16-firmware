@@ -228,9 +228,10 @@ outrx:
 void UpdateFanLevel(void)
 {
     Error = Status.Temp - TempTarget;
+    Step = 1*Error - 0.5*LastError - 8*(LastTemp - Status.Temp);
 
-    if(FanLevel + (1*Error - 0.5*LastError - 8*(LastTemp - Status.Temp)) > 75 && FanLevel + (1*Error - 0.5*LastError - 8*(LastTemp - Status.Temp)) <= 255) {
-        FanLevel += (1*Error - 0.5*LastError - 8*(LastTemp - Status.Temp));
+    if(FanLevel + Step > 75 && FanLevel + Step <= 255) {
+        FanLevel += Step;
     }
     else if(FanLevel + Step > 255) {
         FanLevel = 255;

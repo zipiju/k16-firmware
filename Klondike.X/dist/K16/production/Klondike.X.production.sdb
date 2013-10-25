@@ -287,15 +287,15 @@ EVENT_TRANSFER_TERMINATED 5
 [v _ResultRx ResultRx `(v  1 e 0 0 ]
 "229
 [v _UpdateFanLevel UpdateFanLevel `(v  1 e 0 0 ]
-"249
+"250
 [v _UpdateFanSpeed UpdateFanSpeed `(v  1 e 0 0 ]
-"261
+"262
 [v _InitFAN InitFAN `(v  1 e 0 0 ]
-"281
+"282
 [v _InitTempSensor InitTempSensor `(v  1 e 0 0 ]
-"295
+"296
 [v _InitWorkTick InitWorkTick `(v  1 e 0 0 ]
-"312
+"313
 [v _InitResultRx InitResultRx `(v  1 e 0 0 ]
 "70 C:\firmware-fresh-mod\Klondike.X\main.c
 [v _ISRCode ISRCode `II(v  1 e 0 0 ]
@@ -965,9 +965,9 @@ EVENT_TRANSFER_TERMINATED 5
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 {
 "6
-[v ___lwdiv@quotient quotient `ui  1 a 2 2 ]
+[v ___lwdiv@quotient quotient `ui  1 a 2 1 ]
 "7
-[v ___lwdiv@counter counter `uc  1 a 1 1 ]
+[v ___lwdiv@counter counter `uc  1 a 1 3 ]
 "5
 [v ___lwdiv@divisor divisor `ui  1 p 2 14 ]
 [v ___lwdiv@dividend dividend `ui  1 p 2 16 ]
@@ -1059,25 +1059,25 @@ EVENT_TRANSFER_TERMINATED 5
 {
 "179
 } 0
-"312 C:\firmware-fresh-mod\Klondike.X\klondike.c
+"313 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _InitResultRx InitResultRx `(v  1 e 0 0 ]
 {
-"328
+"329
 } 0
-"295
+"296
 [v _InitWorkTick InitWorkTick `(v  1 e 0 0 ]
 {
-"309
+"310
 } 0
-"281
+"282
 [v _InitTempSensor InitTempSensor `(v  1 e 0 0 ]
 {
-"292
+"293
 } 0
-"261
+"262
 [v _InitFAN InitFAN `(v  1 e 0 0 ]
 {
-"278
+"279
 } 0
 "148
 [v _DetectAsics DetectAsics `(v  1 e 0 0 ]
@@ -1107,14 +1107,7 @@ EVENT_TRANSFER_TERMINATED 5
 "229
 [v _UpdateFanLevel UpdateFanLevel `(v  1 e 0 0 ]
 {
-"246
-} 0
-"28 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\lbtoft.c
-[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
-{
-[v ___lbtoft@c c `uc  1 a 1 17 ]
-[v ___lbtoft@c c `uc  1 a 1 17 ]
-"30
+"247
 } 0
 "45 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\fttol.c
 [v ___fttol __fttol `(l  1 e 4 0 ]
@@ -1147,13 +1140,6 @@ EVENT_TRANSFER_TERMINATED 5
 [v ___ftmul@f1 f1 `f  1 p 3 10 ]
 [v ___ftmul@f2 f2 `f  1 p 3 13 ]
 "84
-} 0
-"5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\ftge.c
-[v ___ftge __ftge `(b  1 e 0 0 ]
-{
-[v ___ftge@ff1 ff1 `f  1 p 3 42 ]
-[v ___ftge@ff2 ff2 `f  1 p 3 45 ]
-"13
 } 0
 "87 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
