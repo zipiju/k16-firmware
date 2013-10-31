@@ -98,7 +98,6 @@ typedef struct _i2c {
 void ProcessCmd(char *cmd);
 void AsicPushWork(void);
 
-void CheckFanSpeed(void);
 void DetectAsics(void);
 
 void ResultRx(void);
