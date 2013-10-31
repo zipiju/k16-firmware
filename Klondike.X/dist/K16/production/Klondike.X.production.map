@@ -5,7 +5,7 @@ Linker command line:
 -W9 --edf=C:\Program Files (x86)\Microchip\xc8\v1.20\dat\en_msgs.txt -cs \
   -h+dist/K16/production\Klondike.X.production.sym \
   --cmf=dist/K16/production\Klondike.X.production.cmf -z -Q16LF1459 \
-  -oC:\Users\Jojko\AppData\Local\Temp\s4es.6 \
+  -oC:\Users\Jojko\AppData\Local\Temp\s194.6 \
   -Mdist/K16/production/Klondike.X.production.map -E1 -ver=XC8 \
   -ACONST=00h-0FFhx32 -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
   -AENTRY=00h-0FFhx32 -ASTRING=00h-0FFhx32 -ACOMMON=070h-07Fh \
@@ -30,7 +30,7 @@ Linker command line:
   -ppowerup=CODE -pfunctab=CODE -ACONFIG=08007h-08008h -pconfig=CONFIG \
   -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\Jojko\AppData\Local\Temp\s4es.obj \
+  C:\Users\Jojko\AppData\Local\Temp\s194.obj \
   dist/K16/production\Klondike.X.production.obj 
 
 Object code version is 3.11
@@ -40,7 +40,7 @@ Machine type is 16LF1459
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Jojko\AppData\Local\Temp\s4es.obj
+C:\Users\Jojko\AppData\Local\Temp\s194.obj
                 end_init                             12       12        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2    1000E       0
@@ -550,7 +550,7 @@ UNUSED ADDRESS RANGES
 ?i1_SendCmdReply                          cstackCOMMON 00076
 ?i1___bmul                                cstackCOMMON 00070
 ?i1___wmul                                cstackCOMMON 00070
-AsicPreCalc@F3347                         dataBANK3    001D0
+AsicPreCalc@F3341                         dataBANK3    001D0
 AsicPreCalc@K                             cstackBANK1  000AC
 AsicPreCalc@m                             cstackBANK1  000B8
 AsicPreCalc@n                             cstackBANK1  000E4
@@ -614,7 +614,7 @@ _Cfg                                      dataBANK3    001E4
 _ClockCfg                                 dataBANK3    001DC
 _CtrlTrfData                              (abs)        00048
 _DetectAsics                              text18       00C8C
-_DetectAsics$2868                         cstackBANK1  000A0
+_DetectAsics$2752                         cstackBANK1  000A0
 _Error                                    bssBANK2     00152
 _FanLevel                                 nvBANK2      0016E
 _GIE                                      (abs)        0005F
@@ -627,7 +627,6 @@ _I2CState                                 bssBANK2     00136
 _ID                                       strings      0089F
 _INPacket                                 (abs)        00220
 _INTCONbits                               (abs)        0000B
-_IOCAF3                                   (abs)        01C9B
 _IOCBF                                    (abs)        00396
 _IOCBPbits                                (abs)        00394
 _ISRCode                                  intentry     00004
@@ -638,7 +637,6 @@ _InitWorkTick                             text15       01C88
 _InitializeSystem                         text12       01CB5
 _LATAbits                                 (abs)        0010C
 _LATC                                     (abs)        0010E
-_LATCbits                                 (abs)        0010E
 _LastError                                bssBANK3     001B0
 _LastTemp                                 bssBANK2     00137
 _NonceRanges                              bssBANK6     00320
@@ -655,10 +653,10 @@ _PWM1DCL                                  (abs)        00611
 _PWM1OE                                   (abs)        0309E
 _PrecalcHashes                            bssBANK3     001B2
 _ProcessCmd                               text2        00414
-_ProcessCmd$2058                          cstackBANK0  00065
+_ProcessCmd$1971                          cstackBANK0  00065
 _ProcessIO                                text1        01461
-_ProcessIO$2376                           cstackBANK2  0016A
-_ProcessIO$2410                           cstackBANK2  0016C
+_ProcessIO$2266                           cstackBANK2  0016A
+_ProcessIO$2300                           cstackBANK2  0016C
 _RCIF                                     (abs)        0008D
 _RCREG                                    (abs)        00199
 _RCSTAbits                                (abs)        0019D
@@ -682,21 +680,10 @@ _SlaveAddress                             bssBANK2     0013A
 _SlowTick                                 bssBANK2     0013B
 _Status                                   dataBANK2    00159
 _Step                                     bssBANK2     00128
-_T1CONbits                                (abs)        00018
-_T1GCONbits                               (abs)        00019
-_T1GSPM                                   (abs)        000CC
 _T2CONbits                                (abs)        0001C
 _TMR0                                     (abs)        00015
 _TMR0CS                                   (abs)        004AD
 _TMR0IF                                   (abs)        0005A
-_TMR1GE                                   (abs)        000CF
-_TMR1GIE                                  (abs)        0048F
-_TMR1GIF                                  (abs)        0008F
-_TMR1H                                    (abs)        00017
-_TMR1IE                                   (abs)        00488
-_TMR1IF                                   (abs)        00088
-_TMR1L                                    (abs)        00016
-_TMR1ON                                   (abs)        000C0
 _TMR2IF                                   (abs)        00089
 _TMR2ON                                   (abs)        000E2
 _TRISAbits                                (abs)        0008C
@@ -766,7 +753,7 @@ _USER_USB_CALLBACK_EVENT_HANDLER          text48       01EEB
 _USTAT                                    (abs)        00E8F
 _USTATcopy                                bssBANK1     000EF
 _UpdateFanLevel                           text22       00594
-_UpdateFanLevel$2869                      cstackBANK1  000D2
+_UpdateFanLevel$2753                      cstackBANK1  000D2
 _UserInit                                 text13       01C75
 _VerySlowTick                             bssBANK2     00145
 _WQI                                      bssBANK2     00156
@@ -1339,7 +1326,7 @@ FUNCTION INFORMATION:
  Auto vars:     Size  Location     Type
 		None
  Return value:  Size  Location     Type
-                  2  856[COMMON] int 
+                  2  821[COMMON] int 
  Registers used:
 		wreg, fsr0l, fsr0h, fsr1l, fsr1h, fsr1l, fsr1h, status,2, status,0, btemp+1, pclath, cstack
  Tracked objects:
@@ -1793,7 +1780,7 @@ Total ram usage:        0 bytes
 
  *************** function _InitResultRx *****************
  Defined at:
-		line 312 in file "klondike.c"
+		line 275 in file "klondike.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1823,7 +1810,7 @@ Total ram usage:        0 bytes
 
  *************** function _InitWorkTick *****************
  Defined at:
-		line 296 in file "klondike.c"
+		line 259 in file "klondike.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1853,7 +1840,7 @@ Total ram usage:        0 bytes
 
  *************** function _InitTempSensor *****************
  Defined at:
-		line 282 in file "klondike.c"
+		line 245 in file "klondike.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1883,7 +1870,7 @@ Total ram usage:        1 bytes
 
  *************** function _InitFAN *****************
  Defined at:
-		line 262 in file "klondike.c"
+		line 225 in file "klondike.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1913,7 +1900,7 @@ Total ram usage:        0 bytes
 
  *************** function _DetectAsics *****************
  Defined at:
-		line 150 in file "klondike.c"
+		line 124 in file "klondike.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1976,7 +1963,7 @@ Total ram usage:        9 bytes
 
  *************** function _WorkTick *****************
  Defined at:
-		line 168 in file "klondike.c"
+		line 141 in file "klondike.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -2039,7 +2026,7 @@ Total ram usage:        7 bytes
 
  *************** function _UpdateFanLevel *****************
  Defined at:
-		line 229 in file "klondike.c"
+		line 203 in file "klondike.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -3322,7 +3309,7 @@ Total ram usage:        1 bytes
 
  *************** function _ResultRx *****************
  Defined at:
-		line 195 in file "klondike.c"
+		line 168 in file "klondike.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type

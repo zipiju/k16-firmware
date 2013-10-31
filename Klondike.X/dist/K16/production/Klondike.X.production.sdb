@@ -277,25 +277,21 @@ EVENT_TRANSFER_TERMINATED 5
 [v _ProcessCmd ProcessCmd `(v  1 e 0 0 ]
 "112
 [v _AsicPushWork AsicPushWork `(v  1 e 0 0 ]
-"126
-[v _CheckFanSpeed CheckFanSpeed `(v  1 e 0 0 ]
-"150
+"124
 [v _DetectAsics DetectAsics `(v  1 e 0 0 ]
-"168
+"141
 [v _WorkTick WorkTick `(v  1 e 0 0 ]
-"195
+"168
 [v _ResultRx ResultRx `(v  1 e 0 0 ]
-"229
+"203
 [v _UpdateFanLevel UpdateFanLevel `(v  1 e 0 0 ]
-"250
-[v _UpdateFanSpeed UpdateFanSpeed `(v  1 e 0 0 ]
-"262
+"225
 [v _InitFAN InitFAN `(v  1 e 0 0 ]
-"282
+"245
 [v _InitTempSensor InitTempSensor `(v  1 e 0 0 ]
-"296
+"259
 [v _InitWorkTick InitWorkTick `(v  1 e 0 0 ]
-"312
+"275
 [v _InitResultRx InitResultRx `(v  1 e 0 0 ]
 "70 C:\firmware-fresh-mod\Klondike.X\main.c
 [v _ISRCode ISRCode `II(v  1 e 0 0 ]
@@ -553,7 +549,7 @@ EVENT_TRANSFER_TERMINATED 5
 "33
 [v _last_bit0 last_bit0 `Yuc  1 e 1 0 ]
 [v _last_bit1 last_bit1 `Yuc  1 e 1 0 ]
-[s S1994 . 1 `uc 1 IOCIF 1 0 :1:0 
+[s S1907 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 IOCIE 1 0 :1:3 
@@ -563,13 +559,13 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 GIE 1 0 :1:7 
 ]
 "355 C:\Program Files (x86)\Microchip\xc8\v1.20\include\pic16lf1459.h
-[s S2003 . 1 `uc 1 . 1 0 :2:0 
+[s S1916 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 T0IE 1 0 :1:5 
 ]
-[u S2008 . 1 `S1994 1 . 1 0 `S2003 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES2008  1 e 1 @11 ]
+[u S1921 . 1 `S1907 1 . 1 0 `S1916 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES1921  1 e 1 @11 ]
 [s S250 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ACTIE 1 0 :1:1 
 `uc 1 USBIE 1 0 :1:2 
@@ -584,48 +580,14 @@ EVENT_TRANSFER_TERMINATED 5
 [v _PIR2bits PIR2bits `VES259  1 e 1 @18 ]
 "659
 [v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
-"684
-[v _TMR1L TMR1L `VEuc  1 e 1 @22 ]
-"703
-[v _TMR1H TMR1H `VEuc  1 e 1 @23 ]
-[s S1634 . 1 `uc 1 TMR1ON 1 0 :1:0 
-`uc 1 . 1 0 :1:1 
-`uc 1 nT1SYNC 1 0 :1:2 
-`uc 1 T1OSCEN 1 0 :1:3 
-`uc 1 T1CKPS 1 0 :2:4 
-`uc 1 TMR1CS 1 0 :2:6 
-]
-"744
-[s S1641 . 1 `uc 1 . 1 0 :4:0 
-`uc 1 T1CKPS0 1 0 :1:4 
-`uc 1 T1CKPS1 1 0 :1:5 
-`uc 1 TMR1CS0 1 0 :1:6 
-`uc 1 TMR1CS1 1 0 :1:7 
-]
-[u S1647 . 1 `S1634 1 . 1 0 `S1641 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES1647  1 e 1 @24 ]
-[s S1665 . 1 `uc 1 T1GSS 1 0 :2:0 
-`uc 1 T1GVAL 1 0 :1:2 
-`uc 1 T1GGO_nDONE 1 0 :1:3 
-`uc 1 T1GSPM 1 0 :1:4 
-`uc 1 T1GTM 1 0 :1:5 
-`uc 1 T1GPOL 1 0 :1:6 
-`uc 1 TMR1GE 1 0 :1:7 
-]
-"813
-[s S1673 . 1 `uc 1 T1GSS0 1 0 :1:0 
-`uc 1 T1GSS1 1 0 :1:1 
-]
-[u S1676 . 1 `S1665 1 . 1 0 `S1673 1 . 1 0 ]
-[v _T1GCONbits T1GCONbits `VES1676  1 e 1 @25 ]
 "881
 [v _PR2 PR2 `VEuc  1 e 1 @27 ]
-[s S1790 . 1 `uc 1 T2CKPS 1 0 :2:0 
+[s S1702 . 1 `uc 1 T2CKPS 1 0 :2:0 
 `uc 1 TMR2ON 1 0 :1:2 
 `uc 1 T2OUTPS 1 0 :4:3 
 ]
 "921
-[s S1794 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+[s S1706 . 1 `uc 1 T2CKPS0 1 0 :1:0 
 `uc 1 T2CKPS1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 T2OUTPS0 1 0 :1:3 
@@ -633,8 +595,8 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 T2OUTPS2 1 0 :1:5 
 `uc 1 T2OUTPS3 1 0 :1:6 
 ]
-[u S1802 . 1 `S1790 1 . 1 0 `S1794 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES1802  1 e 1 @28 ]
+[u S1714 . 1 `S1702 1 . 1 0 `S1706 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES1714  1 e 1 @28 ]
 [s S1597 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 LATA4 1 0 :1:4 
 `uc 1 LATA5 1 0 :1:5 
@@ -655,7 +617,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _TRISCbits TRISCbits `VES259  1 e 1 @142 ]
 "1168
 [v _PIE2bits PIE2bits `VES259  1 e 1 @146 ]
-[s S1868 . 1 `uc 1 PS 1 0 :3:0 
+[s S1781 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 TMR0SE 1 0 :1:4 
 `uc 1 TMR0CS 1 0 :1:5 
@@ -663,27 +625,27 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 nWPUEN 1 0 :1:7 
 ]
 "1225
-[s S1875 . 1 `uc 1 PS0 1 0 :1:0 
+[s S1788 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
 ]
-[u S1882 . 1 `S1868 1 . 1 0 `S1875 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES1882  1 e 1 @149 ]
+[u S1795 . 1 `S1781 1 . 1 0 `S1788 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES1795  1 e 1 @149 ]
 "1398
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
 "1461
 [v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
 "1611
 [v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
-[s S1699 . 1 `uc 1 ADON 1 0 :1:0 
+[s S1613 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :5:2 
 ]
 "1655
-[s S1703 . 1 `uc 1 . 1 0 :1:0 
+[s S1617 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADGO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -691,57 +653,55 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 CHS3 1 0 :1:5 
 `uc 1 CHS4 1 0 :1:6 
 ]
-[s S1711 . 1 `uc 1 . 1 0 :1:0 
+[s S1625 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[u S1714 . 1 `S1699 1 . 1 0 `S1703 1 . 1 0 `S1711 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES1714  1 e 1 @157 ]
-[s S1819 . 1 `uc 1 ADPREF 1 0 :2:0 
+[u S1628 . 1 `S1613 1 . 1 0 `S1617 1 . 1 0 `S1625 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES1628  1 e 1 @157 ]
+[s S1732 . 1 `uc 1 ADPREF 1 0 :2:0 
 `uc 1 . 1 0 :2:2 
 `uc 1 ADCS 1 0 :3:4 
 `uc 1 ADFM 1 0 :1:7 
 ]
 "1730
-[s S1824 . 1 `uc 1 ADPREF0 1 0 :1:0 
+[s S1737 . 1 `uc 1 ADPREF0 1 0 :1:0 
 `uc 1 ADPREF1 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 ADCS0 1 0 :1:4 
 `uc 1 ADCS1 1 0 :1:5 
 `uc 1 ADCS2 1 0 :1:6 
 ]
-[u S1831 . 1 `S1819 1 . 1 0 `S1824 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES1831  1 e 1 @158 ]
-[s S1847 . 1 `uc 1 . 1 0 :4:0 
+[u S1744 . 1 `S1732 1 . 1 0 `S1737 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES1744  1 e 1 @158 ]
+[s S1760 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TRIGSEL 1 0 :3:4 
 ]
 "1791
-[s S1850 . 1 `uc 1 . 1 0 :4:0 
+[s S1763 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TRIGSEL0 1 0 :1:4 
 `uc 1 TRIGSEL1 1 0 :1:5 
 `uc 1 TRIGSEL2 1 0 :1:6 
 ]
-[u S1855 . 1 `S1847 1 . 1 0 `S1850 1 . 1 0 ]
-[v _ADCON2bits ADCON2bits `VES1855  1 e 1 @159 ]
+[u S1768 . 1 `S1760 1 . 1 0 `S1763 1 . 1 0 ]
+[v _ADCON2bits ADCON2bits `VES1768  1 e 1 @159 ]
 "1827
 [v _LATAbits LATAbits `VES1601  1 e 1 @268 ]
 "1879
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-"1896
-[v _LATCbits LATCbits `VES259  1 e 1 @270 ]
 "2455
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "2483
 [v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
-[s S1954 . 1 `uc 1 . 1 0 :4:0 
+[s S1867 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 ANSB4 1 0 :1:4 
 `uc 1 ANSB5 1 0 :1:5 
 ]
 "2499
-[s S1958 . 1 `uc 1 . 1 0 :4:0 
+[s S1871 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 ANSB 1 0 :4:4 
 ]
-[u S1961 . 1 `S1954 1 . 1 0 `S1958 1 . 1 0 ]
-[v _ANSELBbits ANSELBbits `VES1961  1 e 1 @397 ]
+[u S1874 . 1 `S1867 1 . 1 0 `S1871 1 . 1 0 ]
+[v _ANSELBbits ANSELBbits `VES1874  1 e 1 @397 ]
 "2518
 [v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
 "2738
@@ -779,18 +739,18 @@ EVENT_TRANSFER_TERMINATED 5
 [v _SSPCON2bits SSPCON2bits `VES259  1 e 1 @534 ]
 "3746
 [v _SSPCON3bits SSPCON3bits `VES259  1 e 1 @535 ]
-[s S1972 . 1 `uc 1 . 1 0 :4:0 
+[s S1885 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IOCBP4 1 0 :1:4 
 `uc 1 IOCBP5 1 0 :1:5 
 `uc 1 IOCBP6 1 0 :1:6 
 `uc 1 IOCBP7 1 0 :1:7 
 ]
 "3964
-[s S1978 . 1 `uc 1 . 1 0 :4:0 
+[s S1891 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IOCBP 1 0 :4:4 
 ]
-[u S1981 . 1 `S1972 1 . 1 0 `S1978 1 . 1 0 ]
-[v _IOCBPbits IOCBPbits `VES1981  1 e 1 @916 ]
+[u S1894 . 1 `S1885 1 . 1 0 `S1891 1 . 1 0 ]
+[v _IOCBPbits IOCBPbits `VES1894  1 e 1 @916 ]
 "4040
 [v _IOCBF IOCBF `VEuc  1 e 1 @918 ]
 "4162
@@ -847,8 +807,6 @@ EVENT_TRANSFER_TERMINATED 5
 [v _UEP1 UEP1 `VEuc  1 e 1 @3737 ]
 "6319
 [v _GIE GIE `VEb  1 e 0 @95 ]
-"6343
-[v _IOCAF3 IOCAF3 `VEb  1 e 0 @7323 ]
 "6501
 [v _PWM1OE PWM1OE `VEb  1 e 0 @12446 ]
 "6575
@@ -857,24 +815,10 @@ EVENT_TRANSFER_TERMINATED 5
 [v _SSP1EN SSP1EN `VEb  1 e 0 @4269 ]
 "6629
 [v _SSP1IF SSP1IF `VEb  1 e 0 @139 ]
-"6679
-[v _T1GSPM T1GSPM `VEb  1 e 0 @204 ]
 "6703
 [v _TMR0CS TMR0CS `VEb  1 e 0 @1197 ]
 "6707
 [v _TMR0IF TMR0IF `VEb  1 e 0 @90 ]
-"6715
-[v _TMR1GE TMR1GE `VEb  1 e 0 @207 ]
-"6717
-[v _TMR1GIE TMR1GIE `VEb  1 e 0 @1167 ]
-"6719
-[v _TMR1GIF TMR1GIF `VEb  1 e 0 @143 ]
-"6721
-[v _TMR1IE TMR1IE `VEb  1 e 0 @1160 ]
-"6723
-[v _TMR1IF TMR1IF `VEb  1 e 0 @136 ]
-"6725
-[v _TMR1ON TMR1ON `VEb  1 e 0 @192 ]
 "6729
 [v _TMR2IF TMR2IF `VEb  1 e 0 @137 ]
 "6731
@@ -1027,7 +971,7 @@ EVENT_TRANSFER_TERMINATED 5
 "318
 [v AsicPreCalc@work work `*.39S1300  1 p 2 0 ]
 "319
-[v AsicPreCalc@F3347 F3347 `[3]ul  1 s 12 F3347 ]
+[v AsicPreCalc@F3341 F3341 `[3]ul  1 s 12 F3341 ]
 "356
 } 0
 "313
@@ -1059,32 +1003,32 @@ EVENT_TRANSFER_TERMINATED 5
 {
 "179
 } 0
-"312 C:\firmware-fresh-mod\Klondike.X\klondike.c
+"275 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _InitResultRx InitResultRx `(v  1 e 0 0 ]
 {
-"326
+"289
 } 0
-"296
+"259
 [v _InitWorkTick InitWorkTick `(v  1 e 0 0 ]
 {
-"309
+"272
 } 0
-"282
+"245
 [v _InitTempSensor InitTempSensor `(v  1 e 0 0 ]
 {
-"293
+"256
 } 0
-"262
+"225
 [v _InitFAN InitFAN `(v  1 e 0 0 ]
 {
-"279
+"242
 } 0
-"150
+"124
 [v _DetectAsics DetectAsics `(v  1 e 0 0 ]
 {
-"158
+"132
 [v DetectAsics@x x `uc  1 a 1 2 ]
-"163
+"137
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
@@ -1099,10 +1043,10 @@ EVENT_TRANSFER_TERMINATED 5
 [v ___awdiv@dividend dividend `i  1 p 2 10 ]
 "37
 } 0
-"168 C:\firmware-fresh-mod\Klondike.X\klondike.c
+"141 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _WorkTick WorkTick `(v  1 e 0 0 ]
 {
-"192
+"165
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
@@ -1115,10 +1059,10 @@ EVENT_TRANSFER_TERMINATED 5
 [v ___awmod@dividend dividend `i  1 p 2 10 ]
 "30
 } 0
-"229 C:\firmware-fresh-mod\Klondike.X\klondike.c
+"203 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _UpdateFanLevel UpdateFanLevel `(v  1 e 0 0 ]
 {
-"247
+"221
 } 0
 "45 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\fttol.c
 [v ___fttol __fttol `(l  1 e 4 0 ]
@@ -1513,10 +1457,10 @@ EVENT_TRANSFER_TERMINATED 5
 {
 "95
 } 0
-"195 C:\firmware-fresh-mod\Klondike.X\klondike.c
+"168 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _ResultRx ResultRx `(v  1 e 0 0 ]
 {
-"225
+"198
 } 0
 "208 C:\firmware-fresh-mod\Klondike.X\main.c
 [v i1_SendCmdReply SendCmdReply `(v  1 e 0 0 ]
