@@ -103,8 +103,6 @@ void DetectAsics(void);
 
 void ResultRx(void);
 void WorkTick(void);
-void UpdateTemp(void);
-void UpdateFanSpeed(void);
 void UpdateFanLevel(void);
 
 void I2CRelay(char *data, BYTE count);

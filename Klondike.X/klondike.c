@@ -120,32 +120,6 @@ void AsicPushWork(void)
     Status.WorkQC--;
 }
 
-// Housekeeping functons
-
-void CheckFanSpeed(void)
-{
-    if(PWM1OE == 0) { // failed read attempt, abort
-        FAN_PWM = 0;
-        PWM1OE = 1;
-        Status.FanSpeed = 0;
-    }
-    else if(IOCAF3 == 1) { // only check if NegEdge else no Tach present
-        IOCAF3 = 0; // reset Tach detection
-        FAN_PWM = 1; // force PWM fan output to ON
-        PWM1OE=0;
-        T1CONbits.TMR1CS = 0;
-        T1CONbits.T1CKPS = 3;
-        T1CONbits.TMR1ON = TMR1GE = 1;
-        T1GCONbits.T1GPOL = 1;
-        T1GCONbits.T1GSS = T1GCONbits.T1GTM = 0;
-        T1GSPM = 1;
-        TMR1H = TMR1L = 0;
-        TMR1ON = 1;
-        TMR1GIE = TMR1IE = 1;
-        T1GCONbits.T1GGO_nDONE = 1;
-    }
-}
-
 void DetectAsics(void)
 {
     Status.ChipCount = 16;
@@ -163,7 +137,6 @@ void DetectAsics(void)
 }
 
 // ISR functions
-
 void WorkTick(void)
 {
     TMR0 += HashTime;
@@ -224,6 +197,7 @@ outrx:
     IOCBF = 0;
 }
 
+// Housekeeping functons
 // function that adjusts fan speed according to target and current temperatures
 void UpdateFanLevel(void)
 {
@@ -246,18 +220,7 @@ void UpdateFanLevel(void)
     PWM1DCH = Status.FanSpeed = FanLevel;
 }
 
-void UpdateFanSpeed(void)
-{
-    TMR1GIF = TMR1IF = 0;
-    IOCAF3 = 0; // skip one cycle
-    TMR1ON = 0;
-    Status.FanSpeed = TMR1H; // rollover below 330 rpm, not measured
-    FAN_PWM = 0; // re-enable PWM fan output
-    PWM1OE=1;
-}
-
 // Init functions
-
 void InitFAN(void)
 {
     FAN_TRIS = 1;
