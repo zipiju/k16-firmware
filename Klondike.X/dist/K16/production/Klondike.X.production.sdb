@@ -180,7 +180,7 @@ EVENT_TRANSFER_TERMINATED 5
 "318
 [v _AsicPreCalc AsicPreCalc `(v  1 e 0 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\memset.c
-[v _memset memset `(*.4v  1 e 1 0 ]
+[v _memset memset `(*.39v  1 e 1 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\abdiv.c
 [v ___abdiv __abdiv `(c  1 e 1 0 ]
 "5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\abmod.c
@@ -275,27 +275,27 @@ EVENT_TRANSFER_TERMINATED 5
 [v _InitI2CMaster InitI2CMaster `(v  1 e 0 0 ]
 "45 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _ProcessCmd ProcessCmd `(v  1 e 0 0 ]
-"109
+"112
 [v _AsicPushWork AsicPushWork `(v  1 e 0 0 ]
-"123
+"126
 [v _CheckFanSpeed CheckFanSpeed `(v  1 e 0 0 ]
-"147
+"150
 [v _DetectAsics DetectAsics `(v  1 e 0 0 ]
-"165
+"168
 [v _WorkTick WorkTick `(v  1 e 0 0 ]
-"192
+"195
 [v _ResultRx ResultRx `(v  1 e 0 0 ]
-"230
+"229
 [v _UpdateFanLevel UpdateFanLevel `(v  1 e 0 0 ]
-"251
+"250
 [v _UpdateFanSpeed UpdateFanSpeed `(v  1 e 0 0 ]
-"263
+"262
 [v _InitFAN InitFAN `(v  1 e 0 0 ]
-"283
+"282
 [v _InitTempSensor InitTempSensor `(v  1 e 0 0 ]
-"297
+"296
 [v _InitWorkTick InitWorkTick `(v  1 e 0 0 ]
-"313
+"312
 [v _InitResultRx InitResultRx `(v  1 e 0 0 ]
 "70 C:\firmware-fresh-mod\Klondike.X\main.c
 [v _ISRCode ISRCode `II(v  1 e 0 0 ]
@@ -907,7 +907,6 @@ EVENT_TRANSFER_TERMINATED 5
 [v _SlowTick SlowTick `uc  1 e 1 0 ]
 [v _VerySlowTick VerySlowTick `uc  1 e 1 0 ]
 [v _TimeOut TimeOut `uc  1 e 1 0 ]
-[v _ResultPos ResultPos `uc  1 e 1 0 ]
 [v _TempTarget TempTarget `uc  1 e 1 0 ]
 [v _LastTemp LastTemp `uc  1 e 1 0 ]
 [v _FanLevel FanLevel `uc  1 e 1 0 ]
@@ -925,7 +924,7 @@ EVENT_TRANSFER_TERMINATED 5
 "34
 [v _WorkQue WorkQue `[4]S1300  1 e 180 @9020 ]
 "35
-[v _ResultQue ResultQue `VE[2][6]uc  1 e 12 0 ]
+[v _ResultQue ResultQue `VE[6]uc  1 e 6 0 ]
 "36
 [v _ClockCfg ClockCfg `[2]ul  1 e 8 0 ]
 "37
@@ -958,75 +957,75 @@ EVENT_TRANSFER_TERMINATED 5
 "45 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _ProcessCmd ProcessCmd `(v  1 e 0 0 ]
 {
-[v ProcessCmd@cmd cmd `*.6uc  1 a 1 36 ]
-[v ProcessCmd@cmd cmd `*.6uc  1 a 1 36 ]
-"106
+[v ProcessCmd@cmd cmd `*.6uc  1 a 1 23 ]
+[v ProcessCmd@cmd cmd `*.6uc  1 a 1 23 ]
+"109
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 {
 "6
-[v ___lwdiv@quotient quotient `ui  1 a 2 1 ]
+[v ___lwdiv@quotient quotient `ui  1 a 2 14 ]
 "7
-[v ___lwdiv@counter counter `uc  1 a 1 3 ]
+[v ___lwdiv@counter counter `uc  1 a 1 13 ]
 "5
-[v ___lwdiv@divisor divisor `ui  1 p 2 14 ]
-[v ___lwdiv@dividend dividend `ui  1 p 2 16 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 8 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 10 ]
 "26
 } 0
 "208 C:\firmware-fresh-mod\Klondike.X\main.c
 [v _SendCmdReply SendCmdReply `(v  1 e 0 0 ]
 {
 "212
-[v SendCmdReply@n n `uc  1 a 1 15 ]
+[v SendCmdReply@n n `uc  1 a 1 19 ]
 "208
-[v SendCmdReply@cmd cmd `*.39uc  1 p 2 2 ]
-[v SendCmdReply@data data `*.26uc  1 p 2 4 ]
-[v SendCmdReply@count count `uc  1 p 1 6 ]
+[v SendCmdReply@cmd cmd `*.39uc  1 p 2 14 ]
+[v SendCmdReply@data data `*.26uc  1 p 2 16 ]
+[v SendCmdReply@count count `uc  1 p 1 18 ]
 "223
 } 0
 "3 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\bmul.c
 [v ___bmul __bmul `(uc  1 e 1 0 ]
 {
-[v ___bmul@multiplier multiplier `uc  1 a 1 17 ]
+[v ___bmul@multiplier multiplier `uc  1 a 1 11 ]
 "4
-[v ___bmul@product product `uc  1 a 1 16 ]
+[v ___bmul@product product `uc  1 a 1 10 ]
 "3
-[v ___bmul@multiplier multiplier `uc  1 a 1 17 ]
-[v ___bmul@multiplicand multiplicand `uc  1 p 1 14 ]
+[v ___bmul@multiplier multiplier `uc  1 a 1 11 ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 8 ]
 "13
 } 0
-"109 C:\firmware-fresh-mod\Klondike.X\klondike.c
+"112 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _AsicPushWork AsicPushWork `(v  1 e 0 0 ]
 {
-"118
+"121
 } 0
 "3 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\wmul.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 {
 "4
-[v ___wmul@product product `ui  1 a 2 0 ]
+[v ___wmul@product product `ui  1 a 2 12 ]
 "3
-[v ___wmul@multiplier multiplier `ui  1 p 2 14 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 16 ]
+[v ___wmul@multiplier multiplier `ui  1 p 2 8 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 10 ]
 "13
 } 0
 "318 C:\firmware-fresh-mod\Klondike.X\asic.c
 [v _AsicPreCalc AsicPreCalc `(v  1 e 0 0 ]
 {
 "321
-[v AsicPreCalc@m m `[8]ul  1 a 32 12 ]
+[v AsicPreCalc@m m `[8]ul  1 a 32 24 ]
 "319
-[v AsicPreCalc@K K `[3]ul  1 a 12 0 ]
+[v AsicPreCalc@K K `[3]ul  1 a 12 12 ]
 "320
-[v AsicPreCalc@x x `ul  1 a 4 52 ]
-[v AsicPreCalc@y y `ul  1 a 4 48 ]
-[v AsicPreCalc@z z `ul  1 a 4 44 ]
+[v AsicPreCalc@x x `ul  1 a 4 64 ]
+[v AsicPreCalc@y y `ul  1 a 4 60 ]
+[v AsicPreCalc@z z `ul  1 a 4 56 ]
 "322
-[v AsicPreCalc@n n `uc  1 a 1 56 ]
+[v AsicPreCalc@n n `uc  1 a 1 68 ]
 [s S1300 _worktask 45 `uc 1 WorkID 1 0 `[8]ul 1 MidState 32 1 `[3]ul 1 Merkle 12 33 ]
 "318
-[v AsicPreCalc@work work `*.39S1300  1 p 2 13 ]
+[v AsicPreCalc@work work `*.39S1300  1 p 2 0 ]
 "319
 [v AsicPreCalc@F3347 F3347 `[3]ul  1 s 12 F3347 ]
 "356
@@ -1034,15 +1033,15 @@ EVENT_TRANSFER_TERMINATED 5
 "313
 [v _rotate rotate `(ul  1 e 4 0 ]
 {
-[v rotate@x x `ul  1 p 4 0 ]
-[v rotate@y y `uc  1 p 1 4 ]
+[v rotate@x x `ul  1 p 4 8 ]
+[v rotate@y y `uc  1 p 1 12 ]
 "315
 } 0
 "36
 [v _SendAsicData SendAsicData `(v  1 e 0 0 ]
 {
 [s S1300 _worktask 45 `uc 1 WorkID 1 0 `[8]ul 1 MidState 32 1 `[3]ul 1 Merkle 12 33 ]
-[v SendAsicData@work work `*.39S1300  1 p 2 2 ]
+[v SendAsicData@work work `*.39S1300  1 p 2 14 ]
 "55
 } 0
 "58
@@ -1060,147 +1059,147 @@ EVENT_TRANSFER_TERMINATED 5
 {
 "179
 } 0
-"313 C:\firmware-fresh-mod\Klondike.X\klondike.c
+"312 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _InitResultRx InitResultRx `(v  1 e 0 0 ]
 {
-"327
+"326
 } 0
-"297
+"296
 [v _InitWorkTick InitWorkTick `(v  1 e 0 0 ]
 {
-"310
+"309
 } 0
-"283
+"282
 [v _InitTempSensor InitTempSensor `(v  1 e 0 0 ]
 {
-"294
+"293
 } 0
-"263
+"262
 [v _InitFAN InitFAN `(v  1 e 0 0 ]
 {
-"280
+"279
 } 0
-"147
+"150
 [v _DetectAsics DetectAsics `(v  1 e 0 0 ]
 {
-"155
-[v DetectAsics@x x `uc  1 a 1 14 ]
-"160
+"158
+[v DetectAsics@x x `uc  1 a 1 2 ]
+"163
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 {
 "6
-[v ___awdiv@quotient quotient `i  1 a 2 3 ]
+[v ___awdiv@quotient quotient `i  1 a 2 15 ]
 "7
-[v ___awdiv@sign sign `uc  1 a 1 2 ]
-[v ___awdiv@counter counter `uc  1 a 1 1 ]
+[v ___awdiv@sign sign `uc  1 a 1 14 ]
+[v ___awdiv@counter counter `uc  1 a 1 13 ]
 "5
-[v ___awdiv@divisor divisor `i  1 p 2 14 ]
-[v ___awdiv@dividend dividend `i  1 p 2 16 ]
+[v ___awdiv@divisor divisor `i  1 p 2 8 ]
+[v ___awdiv@dividend dividend `i  1 p 2 10 ]
 "37
 } 0
-"165 C:\firmware-fresh-mod\Klondike.X\klondike.c
+"168 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _WorkTick WorkTick `(v  1 e 0 0 ]
 {
-"189
+"192
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 {
 "6
-[v ___awmod@sign sign `uc  1 a 1 2 ]
-[v ___awmod@counter counter `uc  1 a 1 1 ]
+[v ___awmod@sign sign `uc  1 a 1 14 ]
+[v ___awmod@counter counter `uc  1 a 1 13 ]
 "5
-[v ___awmod@divisor divisor `i  1 p 2 14 ]
-[v ___awmod@dividend dividend `i  1 p 2 16 ]
+[v ___awmod@divisor divisor `i  1 p 2 8 ]
+[v ___awmod@dividend dividend `i  1 p 2 10 ]
 "30
 } 0
-"230 C:\firmware-fresh-mod\Klondike.X\klondike.c
+"229 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _UpdateFanLevel UpdateFanLevel `(v  1 e 0 0 ]
 {
-"248
+"247
 } 0
 "45 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\fttol.c
 [v ___fttol __fttol `(l  1 e 4 0 ]
 {
 "47
-[v ___fttol@lval lval `ul  1 a 4 51 ]
+[v ___fttol@lval lval `ul  1 a 4 41 ]
 "46
-[v ___fttol@exp1 exp1 `uc  1 a 1 55 ]
-[v ___fttol@sign1 sign1 `uc  1 a 1 50 ]
+[v ___fttol@exp1 exp1 `uc  1 a 1 45 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 40 ]
 "45
-[v ___fttol@f1 f1 `f  1 p 3 42 ]
+[v ___fttol@f1 f1 `f  1 p 3 32 ]
 "73
 } 0
 "16 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\ftneg.c
 [v ___ftneg __ftneg `(f  1 e 3 0 ]
 {
-[v ___ftneg@f1 f1 `f  1 p 3 26 ]
+[v ___ftneg@f1 f1 `f  1 p 3 16 ]
 "20
 } 0
 "52 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\ftmul.c
 [v ___ftmul __ftmul `(f  1 e 3 0 ]
 {
 "54
-[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 21 ]
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 11 ]
 "53
-[v ___ftmul@sign sign `uc  1 a 1 25 ]
-[v ___ftmul@cntr cntr `uc  1 a 1 24 ]
-[v ___ftmul@exp exp `uc  1 a 1 20 ]
+[v ___ftmul@sign sign `uc  1 a 1 15 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 14 ]
+[v ___ftmul@exp exp `uc  1 a 1 10 ]
 "52
-[v ___ftmul@f1 f1 `f  1 p 3 10 ]
-[v ___ftmul@f2 f2 `f  1 p 3 13 ]
+[v ___ftmul@f1 f1 `f  1 p 3 0 ]
+[v ___ftmul@f2 f2 `f  1 p 3 3 ]
 "84
 } 0
 "87 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
 {
 "88
-[v ___ftadd@exp1 exp1 `uc  1 a 1 41 ]
-[v ___ftadd@exp2 exp2 `uc  1 a 1 40 ]
-[v ___ftadd@sign sign `uc  1 a 1 39 ]
+[v ___ftadd@exp1 exp1 `uc  1 a 1 31 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 30 ]
+[v ___ftadd@sign sign `uc  1 a 1 29 ]
 "87
-[v ___ftadd@f1 f1 `f  1 p 3 29 ]
-[v ___ftadd@f2 f2 `f  1 p 3 32 ]
+[v ___ftadd@f1 f1 `f  1 p 3 19 ]
+[v ___ftadd@f2 f2 `f  1 p 3 22 ]
 "148
 } 0
 "33 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\awtoft.c
 [v ___awtoft __awtoft `(f  1 e 3 0 ]
 {
 "34
-[v ___awtoft@sign sign `uc  1 a 1 17 ]
+[v ___awtoft@sign sign `uc  1 a 1 21 ]
 "33
-[v ___awtoft@c c `i  1 p 2 5 ]
+[v ___awtoft@c c `i  1 p 2 16 ]
 "42
 } 0
 "63 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\pic\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 {
-[v ___ftpack@arg arg `um  1 p 3 0 ]
-[v ___ftpack@exp exp `uc  1 p 1 3 ]
-[v ___ftpack@sign sign `uc  1 p 1 4 ]
+[v ___ftpack@arg arg `um  1 p 3 8 ]
+[v ___ftpack@exp exp `uc  1 p 1 11 ]
+[v ___ftpack@sign sign `uc  1 p 1 12 ]
 "86
 } 0
 "669 C:\firmware-fresh-mod/USB/usb_device.c
 [v _USBDeviceTasks USBDeviceTasks `(v  1 e 0 0 ]
 {
 "670
-[v USBDeviceTasks@i i `uc  1 a 1 31 ]
+[v USBDeviceTasks@i i `uc  1 a 1 20 ]
 "1004
 } 0
 "2523
 [v _USBCtrlEPService USBCtrlEPService `(v  1 s 0 USBCtrlEPService ]
 {
 "2551
-[v USBCtrlEPService@setup_cnt setup_cnt `uc  1 a 1 28 ]
+[v USBCtrlEPService@setup_cnt setup_cnt `uc  1 a 1 17 ]
 "2580
 } 0
 "2748
 [v _USBCtrlTrfInHandler USBCtrlTrfInHandler `(v  1 s 0 USBCtrlTrfInHandler ]
 {
 "2749
-[v USBCtrlTrfInHandler@lastDTS lastDTS `uc  1 a 1 17 ]
+[v USBCtrlTrfInHandler@lastDTS lastDTS `uc  1 a 1 13 ]
 "2819
 } 0
 "2695
@@ -1212,9 +1211,9 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBCtrlTrfRxService USBCtrlTrfRxService `(v  1 s 0 USBCtrlTrfRxService ]
 {
 "2020
-[v USBCtrlTrfRxService@byteToRead byteToRead `uc  1 a 1 1 ]
+[v USBCtrlTrfRxService@byteToRead byteToRead `uc  1 a 1 13 ]
 "2021
-[v USBCtrlTrfRxService@i i `uc  1 a 1 0 ]
+[v USBCtrlTrfRxService@i i `uc  1 a 1 12 ]
 "2110
 } 0
 "2623
@@ -1231,7 +1230,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBStdFeatureReqHandler USBStdFeatureReqHandler `(v  1 s 0 USBStdFeatureReqHandler ]
 {
 "2913
-[v USBStdFeatureReqHandler@pUEP pUEP `*.39uc  1 a 2 19 ]
+[v USBStdFeatureReqHandler@pUEP pUEP `*.39uc  1 a 2 8 ]
 [s S27 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
@@ -1259,13 +1258,13 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 filler2 1 1 :8:0 
 `us 1 ADR 2 2 ]
 [u S61 __BDT 4 `S52 1 . 4 0 `S57 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBStdFeatureReqHandler@p p `*.4S61  1 a 1 22 ]
+[v USBStdFeatureReqHandler@p p `*.4S61  1 a 1 11 ]
 [s S134 . 1 `uc 1 ping_pong_state 1 0 :1:0 
 `uc 1 transfer_terminated 1 0 :1:1 
 ]
 "2909
 [u S137 . 1 `S134 1 bits 1 0 `uc 1 Val 1 0 ]
-[v USBStdFeatureReqHandler@current_ep_data current_ep_data `S137  1 a 1 21 ]
+[v USBStdFeatureReqHandler@current_ep_data current_ep_data `S137  1 a 1 10 ]
 "3131
 } 0
 "2283
@@ -1298,7 +1297,7 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 filler2 1 1 :8:0 
 `us 1 ADR 2 2 ]
 [u S61 __BDT 4 `S52 1 . 4 0 `S57 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBStdGetStatusHandler@p p `*.4S61  1 a 1 15 ]
+[v USBStdGetStatusHandler@p p `*.4S61  1 a 1 9 ]
 "2337
 } 0
 "2207
@@ -1310,22 +1309,21 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBStdSetCfgHandler USBStdSetCfgHandler `(v  1 s 0 USBStdSetCfgHandler ]
 {
 "2139
-[v USBStdSetCfgHandler@p p `*.39uc  1 a 2 18 ]
-[v USBStdSetCfgHandler@i_1089 i `uc  1 a 1 20 ]
+[v USBStdSetCfgHandler@p p `*.39uc  1 a 2 7 ]
+[v USBStdSetCfgHandler@i_1089 i `uc  1 a 1 9 ]
 "2133
-[v USBStdSetCfgHandler@i i `uc  1 a 1 21 ]
+[v USBStdSetCfgHandler@i i `uc  1 a 1 10 ]
 "2187
 } 0
 "10 C:\Program Files (x86)\Microchip\xc8\v1.20\sources\common\memset.c
-[v _memset memset `(*.4v  1 e 1 0 ]
+[v _memset memset `(*.39v  1 e 1 0 ]
 {
-[v memset@p1 p1 `*.4v  1 a 1 1 ]
 "15
-[v memset@p p `*.4uc  1 a 1 2 ]
+[v memset@p p `*.39uc  1 a 2 15 ]
 "10
-[v memset@p1 p1 `*.4v  1 a 1 1 ]
-[v memset@c c `i  1 p 2 14 ]
-[v memset@n n `ui  1 p 2 16 ]
+[v memset@p1 p1 `*.39v  1 p 2 8 ]
+[v memset@c c `i  1 p 2 10 ]
+[v memset@n n `ui  1 p 2 12 ]
 "22
 } 0
 "1786 C:\firmware-fresh-mod/USB/usb_device.c
@@ -1342,7 +1340,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBCtrlTrfTxService USBCtrlTrfTxService `(v  1 s 0 USBCtrlTrfTxService ]
 {
 "1939
-[v USBCtrlTrfTxService@byteToSend byteToSend `uc  1 a 1 16 ]
+[v USBCtrlTrfTxService@byteToSend byteToSend `uc  1 a 1 10 ]
 "1991
 } 0
 "1590
@@ -1368,9 +1366,9 @@ EVENT_TRANSFER_TERMINATED 5
 "630 C:\firmware-fresh-mod\Klondike.X\main.c
 [v _USER_USB_CALLBACK_EVENT_HANDLER USER_USB_CALLBACK_EVENT_HANDLER `(E5  1 e 1 0 ]
 {
-[v USER_USB_CALLBACK_EVENT_HANDLER@event event `i  1 p 2 12 ]
-[v USER_USB_CALLBACK_EVENT_HANDLER@pdata pdata `*.4v  1 p 1 14 ]
-[v USER_USB_CALLBACK_EVENT_HANDLER@size size `us  1 p 2 15 ]
+[v USER_USB_CALLBACK_EVENT_HANDLER@event event `i  1 p 2 0 ]
+[v USER_USB_CALLBACK_EVENT_HANDLER@pdata pdata `*.39v  1 p 2 2 ]
+[v USER_USB_CALLBACK_EVENT_HANDLER@size size `us  1 p 2 4 ]
 "671
 } 0
 "460
@@ -1381,7 +1379,7 @@ EVENT_TRANSFER_TERMINATED 5
 "1173 C:\firmware-fresh-mod/USB/usb_device.c
 [v _USBTransferOnePacket USBTransferOnePacket `(*.4v  1 e 1 0 ]
 {
-[v USBTransferOnePacket@ep ep `uc  1 a 1 5 ]
+[v USBTransferOnePacket@ep ep `uc  1 a 1 17 ]
 [s S27 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
@@ -1409,29 +1407,29 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 filler2 1 1 :8:0 
 `us 1 ADR 2 2 ]
 [u S61 __BDT 4 `S52 1 . 4 0 `S57 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBTransferOnePacket@handle handle `*.4VES61  1 a 1 6 ]
+[v USBTransferOnePacket@handle handle `*.4VES61  1 a 1 18 ]
 "1173
-[v USBTransferOnePacket@ep ep `uc  1 a 1 5 ]
-[v USBTransferOnePacket@dir dir `uc  1 p 1 0 ]
-[v USBTransferOnePacket@data data `*.6uc  1 p 1 1 ]
-[v USBTransferOnePacket@len len `uc  1 p 1 2 ]
+[v USBTransferOnePacket@ep ep `uc  1 a 1 17 ]
+[v USBTransferOnePacket@dir dir `uc  1 p 1 12 ]
+[v USBTransferOnePacket@data data `*.6uc  1 p 1 13 ]
+[v USBTransferOnePacket@len len `uc  1 p 1 14 ]
 "1223
 } 0
 "1056
 [v _USBEnableEndpoint USBEnableEndpoint `(v  1 e 0 0 ]
 {
-[v USBEnableEndpoint@ep ep `uc  1 a 1 8 ]
+[v USBEnableEndpoint@ep ep `uc  1 a 1 20 ]
 "1057
-[v USBEnableEndpoint@p p `*.39uc  1 a 2 6 ]
+[v USBEnableEndpoint@p p `*.39uc  1 a 2 18 ]
 "1056
-[v USBEnableEndpoint@ep ep `uc  1 a 1 8 ]
-[v USBEnableEndpoint@options options `uc  1 p 1 17 ]
+[v USBEnableEndpoint@ep ep `uc  1 a 1 20 ]
+[v USBEnableEndpoint@options options `uc  1 p 1 15 ]
 "1079
 } 0
 "1713
 [v _USBConfigureEndpoint USBConfigureEndpoint `(v  1 s 0 USBConfigureEndpoint ]
 {
-[v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 15 ]
+[v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 13 ]
 [s S27 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
@@ -1459,10 +1457,10 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 filler2 1 1 :8:0 
 `us 1 ADR 2 2 ]
 [u S61 __BDT 4 `S52 1 . 4 0 `S57 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBConfigureEndpoint@handle handle `*.4VES61  1 a 1 16 ]
+[v USBConfigureEndpoint@handle handle `*.4VES61  1 a 1 14 ]
 "1713
-[v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 15 ]
-[v USBConfigureEndpoint@direction direction `uc  1 p 1 14 ]
+[v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 13 ]
+[v USBConfigureEndpoint@direction direction `uc  1 p 1 8 ]
 "1754
 } 0
 "434 C:\firmware-fresh-mod\Klondike.X\main.c
@@ -1504,10 +1502,10 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBDeviceInit USBDeviceInit `(v  1 e 0 0 ]
 {
 "481
-[v USBDeviceInit@p p `*.39uc  1 a 2 0 ]
-[v USBDeviceInit@i_718 i `uc  1 a 1 2 ]
+[v USBDeviceInit@p p `*.39uc  1 a 2 10 ]
+[v USBDeviceInit@i_718 i `uc  1 a 1 12 ]
 "468
-[v USBDeviceInit@i i `uc  1 a 1 3 ]
+[v USBDeviceInit@i i `uc  1 a 1 13 ]
 "552
 } 0
 "70 C:\firmware-fresh-mod\Klondike.X\main.c
@@ -1515,10 +1513,10 @@ EVENT_TRANSFER_TERMINATED 5
 {
 "95
 } 0
-"192 C:\firmware-fresh-mod\Klondike.X\klondike.c
+"195 C:\firmware-fresh-mod\Klondike.X\klondike.c
 [v _ResultRx ResultRx `(v  1 e 0 0 ]
 {
-"226
+"225
 } 0
 "208 C:\firmware-fresh-mod\Klondike.X\main.c
 [v i1_SendCmdReply SendCmdReply `(v  1 e 0 0 ]

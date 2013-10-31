@@ -26,13 +26,13 @@ const IDENTITY ID = { 0x10, "K16", 0xDEADBEEF };
 //const char FwPwd[] = FWPWD;
 
 DWORD BankRanges[8] = { 0, 0x40000000, 0x2aaaaaaa, 0x20000000, 0x19999999, 0x15555555, 0x12492492, 0x10000000 };
-BYTE WorkNow, BankSize, ResultQC, SlowTick, VerySlowTick, TimeOut, ResultPos = 0, TempTarget, LastTemp, FanLevel;
+BYTE WorkNow, BankSize, ResultQC, SlowTick, VerySlowTick, TimeOut, TempTarget, LastTemp, FanLevel;
 BYTE SlaveAddress = MASTER_ADDRESS;
 BYTE HashTime = 256 - ((WORD)TICK_TOTAL/DEFAULT_HASHCLOCK);
 volatile WORKSTATUS Status = {'I',0,0,0,0,0,0,0,0, WORK_TICKS, 0 };
 WORKCFG Cfg = { DEFAULT_HASHCLOCK, DEFAULT_TEMP_TARGET, 0, 0, 0 };
 WORKTASK WorkQue[MAX_WORK_COUNT];
-volatile BYTE ResultQue[MAX_RESULT_COUNT][6];
+volatile BYTE ResultQue[6];
 DWORD ClockCfg[2] = { (((DWORD)DEFAULT_HASHCLOCK) << 18) | CLOCK_LOW_CHG, CLOCK_HIGH_CFG };
 INT16 Step, Error, LastError;
 
@@ -83,7 +83,10 @@ void ProcessCmd(char *cmd)
                 else
                     ClockCfg[0] = ((DWORD)Cfg.HashClock << 18) | CLOCK_LOW_CHG;
                 HashTime = 256 - ((WORD)TICK_TOTAL/Cfg.HashClock);
-                TempTarget = Cfg.TempTarget;
+                if(Cfg.TempTarget != 0)
+                    TempTarget = Cfg.TempTarget;
+                else
+                    Cfg.TempTarget = DEFAULT_TEMP_TARGET;
             }
             SendCmdReply(cmd, (char *)&Cfg, sizeof(Cfg));
             break;
@@ -191,14 +194,10 @@ void WorkTick(void)
 void ResultRx(void)
 {
     TimeOut = 0;
-    ResultPos++;
-    
-    if(ResultPos == MAX_RESULT_COUNT)
-        ResultPos = 0;
 
     while(ResultQC < 4) {
         if(RCIF) {
-            ResultQue[ResultPos][2+ResultQC++] = RCREG;
+            ResultQue[2+ResultQC++] = RCREG;
             TimeOut = 0;
         }
         if(TimeOut++ > 32) {
@@ -214,9 +213,9 @@ void ResultRx(void)
     }
     
     if(Status.State == 'W') {
-        ResultQue[ResultPos][0] = '=';
-        ResultQue[ResultPos][1] = Status.WorkID;
-        SendCmdReply(&ResultQue[ResultPos], &ResultQue[ResultPos]+1, sizeof(ResultQue[ResultPos])-1);
+        ResultQue[0] = '=';
+        ResultQue[1] = Status.WorkID;
+        SendCmdReply(&ResultQue, &ResultQue+1, sizeof(ResultQue)-1);
     }
 
 outrx:
